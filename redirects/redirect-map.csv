@@ -1,0 +1,52 @@
+source_path,destination_path,status,match_type,priority,reason
+/products/index.php,/win4lin/,301,exact,high,Old product index with Win4Lin historical intent
+/products/win4lin/index.php,/win4lin/,301,exact,high,Old Win4Lin product index
+/products/win4lin30,/win4lin/3-0/,301,exact,medium,Old Win4Lin 3.0 product page without trailing slash
+/products/win4lin30/,/win4lin/3-0/,301,exact,high,Old Win4Lin 3.0 product page
+/products/win4lin30/index.php,/win4lin/3-0/,301,exact,high,Old Win4Lin 3.0 product index
+/products/win4lin40,/win4lin/4-0/,301,exact,high,Old Win4Lin 4.0 product page without trailing slash
+/products/win4lin40/,/win4lin/4-0/,301,exact,high,Old Win4Lin 4.0 product page
+/products/win4lin40/index.php,/win4lin/4-0/,301,exact,high,Old Win4Lin 4.0 product index
+/products/win4lin40/benefits.php,/win4lin/4-0/benefits/,301,exact,high,Old Win4Lin Desktop benefits page
+/products/win4lin40/features.php,/win4lin/4-0/features/,301,exact,high,Old Win4Lin Desktop features page
+/products/win4lin40/requirements.php,/win4lin/4-0/requirements/,301,exact,high,Old Win4Lin Desktop requirements page
+/products/win4lin50,/win4lin/5-0/,301,exact,high,Old Win4Lin 5.0 product page without trailing slash
+/products/win4lin50/,/win4lin/5-0/,301,exact,high,Old Win4Lin 5.0 product page
+/products/win4lin50/index.php,/win4lin/5-0/,301,exact,high,Old Win4Lin 5.0 product index
+/products/win4lin50/requirements.php,/win4lin/5-0/requirements/,301,exact,high,Old Win4Lin 5.0 requirements page
+/products/wts,/win4lin/terminal-server/,301,exact,high,Old Win4Lin Terminal Server product page
+/products/wts/,/win4lin/terminal-server/,301,exact,high,Old Win4Lin Terminal Server product page
+/products/wts/benefits.php,/win4lin/terminal-server/benefits/,301,exact,high,Old Terminal Server benefits page
+/products/wts/features.php,/win4lin/terminal-server/features/,301,exact,high,Old Terminal Server features page
+/products/wts/requirements.php,/win4lin/terminal-server/requirements/,301,exact,high,Old Terminal Server requirements page
+/products/wts/technology.php,/win4lin/terminal-server/technology/,301,exact,high,Old Terminal Server technology page
+/support/docs/Win4Lin-whitepapers.php,/win4lin/whitepapers/,301,exact,high,Old Win4Lin whitepapers URL
+/support/docs/win4lin-whitepapers.php,/win4lin/whitepapers/,301,exact,medium,Lowercase whitepapers variant
+/support/docs/Win4Lin-whitepapers,/win4lin/whitepapers/,301,exact,medium,Extensionless whitepapers variant
+/support/docs/win4lin-50-relnote.html,/win4lin/5-0/release-notes/,301,exact,high,Old Win4Lin 5.0 release notes URL
+/support/docs/400_relnotes.html,/win4lin/4-0/release-notes/,301,exact,high,Old Win4Lin 4.0 release notes URL
+/support/win4lin/downloads/kernel_patch/updates.php,/win4lin/kernel-patches/,301,exact,high,Old kernel patch updates URL
+/member/downloads,/win4lin/kernel-patches/,301,exact,medium,Old member downloads path
+/member/downloads/*,/win4lin/kernel-patches/,301,prefix,medium,Old member download path with kernel patch intent
+/support/docs,/win4lin/whitepapers/,301,exact,medium,Old documentation section
+/support/docs/,/win4lin/whitepapers/,301,exact,medium,Old documentation section
+/support/docs/*,/win4lin/whitepapers/,301,prefix,medium,Old documentation section
+/support,/win4lin/,301,exact,medium,Old support section
+/support/,/win4lin/,301,exact,medium,Old support section
+/support/*,/win4lin/,301,prefix,medium,Old support section
+/download,/win4lin/,301,exact,medium,Old download intent
+/download/*,/win4lin/,301,prefix,medium,Old download intent
+/downloads,/win4lin/,301,exact,medium,Old downloads intent
+/downloads/*,/win4lin/,301,prefix,medium,Old downloads intent
+/store,/win4lin/,301,exact,low,Old commercial or store intent
+/store/*,/win4lin/,301,prefix,low,Old commercial or store intent
+/cart,/win4lin/,301,exact,low,Old cart intent
+/cart/*,/win4lin/,301,prefix,low,Old cart intent
+/buy,/win4lin/,301,exact,low,Old purchase intent
+/buy/*,/win4lin/,301,prefix,low,Old purchase intent
+/lists/,/win4lin/,301,exact,medium,Old mailing list archives
+/lists/*,/win4lin/,301,prefix,medium,Old mailing list archives
+/win4lin40,/win4lin/4-0/,301,exact,medium,Common old short version URL
+/win4lin40/*,/win4lin/4-0/,301,prefix,medium,Common old short version URL
+/win4lin5,/win4lin/5-0/,301,exact,medium,Common old short version URL
+/win4lin5/*,/win4lin/5-0/,301,prefix,medium,Common old short version URL

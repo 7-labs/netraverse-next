@@ -1,0 +1,485 @@
+{
+  "apex-legends": {
+    "slug": "apex-legends",
+    "title": "Apex Legends",
+    "steamAppId": "1172470",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "There is no working method; EA blocks Linux entirely, so play on a Windows PC or console.",
+    "warningNote": "EA disabled EasyAntiCheat support for Linux/Steam Deck in late 2024; launching on Linux now bans or blocks you from online matches.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "fortnite": {
+    "slug": "fortnite",
+    "title": "Fortnite",
+    "steamAppId": "",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No supported path on Linux; Epic refuses to enable EAC for Proton, so use Windows, console, or cloud streaming (GeForce NOW/Xbox Cloud).",
+    "warningNote": "Epic has repeatedly declined to enable EasyAntiCheat on Linux/Steam Deck; the game is not on Steam and will not run via Proton online.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "valorant": {
+    "slug": "valorant",
+    "title": "Valorant",
+    "steamAppId": "",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "There is no Linux path; Vanguard is kernel-level and Riot blocks Proton, so use a Windows PC.",
+    "warningNote": "Riot Vanguard is a kernel-level anti-cheat that refuses to run under Wine/Proton; Riot has publicly confirmed no Linux support.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "league-of-legends": {
+    "slug": "league-of-legends",
+    "title": "League of Legends",
+    "steamAppId": "",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No working Linux method since Vanguard was added; use a Windows PC.",
+    "warningNote": "Riot added kernel-level Vanguard to League in 2024, which blocks Wine/Proton; previously-working setups no longer launch.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "call-of-duty": {
+    "slug": "call-of-duty",
+    "title": "Call of Duty: Black Ops 6",
+    "steamAppId": "2933620",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No Linux path for multiplayer; use Windows. Recent titles also require TPM 2.0 and Secure Boot.",
+    "warningNote": "RICOCHET kernel anti-cheat blocks Proton, and newer CoD titles enforce TPM 2.0/Secure Boot, making Linux play impossible.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "pubg-battlegrounds": {
+    "slug": "pubg-battlegrounds",
+    "title": "PUBG: Battlegrounds",
+    "steamAppId": "578080",
+    "protonTier": "borked",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No working Linux path; the developer has not enabled BattlEye's Proton support, so use Windows.",
+    "warningNote": "BattlEye supports Proton, but PUBG's developers have not opted in, so the game fails to launch on Linux/Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "grand-theft-auto-v": {
+    "slug": "grand-theft-auto-v",
+    "title": "Grand Theft Auto V",
+    "steamAppId": "271590",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "playable",
+    "desktopLinuxStatus": "works-with-tweaks",
+    "bestMethod": "Story Mode plays great via Proton; for GTA Online expect failures and use Windows instead.",
+    "warningNote": "BattlEye was added to GTA Online in Sept 2024 and breaks online play on Linux; single-player Story Mode is unaffected.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/271590",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "ea-sports-fc": {
+    "slug": "ea-sports-fc",
+    "title": "EA Sports FC 25",
+    "steamAppId": "2669320",
+    "protonTier": "borked",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No working Linux path; EA's kernel anti-cheat blocks Proton, so use Windows or console.",
+    "warningNote": "EA's Javelin/EA anti-cheat is kernel-level and is not enabled for Proton, so the game does not run on Linux/Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "destiny-2": {
+    "slug": "destiny-2",
+    "title": "Destiny 2",
+    "steamAppId": "1085660",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No Linux path; Bungie deliberately did not enable BattlEye Proton support and bans Linux play, so use Windows.",
+    "warningNote": "Bungie chose not to opt into BattlEye's Proton support; running Destiny 2 on Linux risks an account ban.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "rust": {
+    "slug": "rust",
+    "title": "Rust",
+    "steamAppId": "252490",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No working Linux path; Facepunch does not enable EAC for Proton and treats Linux as a cheat vector, so use Windows.",
+    "warningNote": "Facepunch dropped Linux/Proton EAC support; the COO stated there are no plans to re-enable it, so online play is blocked.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "rainbow-six-siege": {
+    "slug": "rainbow-six-siege",
+    "title": "Tom Clancy's Rainbow Six Siege",
+    "steamAppId": "359550",
+    "protonTier": "borked",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No working Linux path; Ubisoft has not enabled BattlEye's Proton support, so use Windows.",
+    "warningNote": "BattlEye supports Proton, but Ubisoft has not opted in, so the game kicks Linux players from multiplayer.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "roblox": {
+    "slug": "roblox",
+    "title": "Roblox",
+    "steamAppId": "",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No supported Linux path since the Hyperion anti-cheat update; use Windows, ChromeOS, or mobile.",
+    "warningNote": "Roblox's Hyperion (Byfron) anti-cheat blocks Wine/Proton since 2024; Sober and similar workarounds are unofficial and frequently break.",
+    "confidence": "high",
+    "sourceUrl": "https://www.gamingonlinux.com/anticheat/",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "marvel-rivals": {
+    "slug": "marvel-rivals",
+    "title": "Marvel Rivals",
+    "steamAppId": "2767030",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "works-with-tweaks",
+    "bestMethod": "Playable on desktop Linux with a recent Proton; add 'SteamDeck=1 %command%' to launch options if it refuses to start.",
+    "warningNote": "NetEase's NEAC anti-cheat runs in user space and tolerates Proton, but it is officially unsupported and status is volatile across patches.",
+    "confidence": "medium",
+    "sourceUrl": "https://www.protondb.com/app/2767030",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "counter-strike-2": {
+    "slug": "counter-strike-2",
+    "title": "Counter-Strike 2",
+    "steamAppId": "730",
+    "protonTier": "native",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Just install and play; CS2 ships a native Linux build and VAC works fine.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/730",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "elden-ring": {
+    "slug": "elden-ring",
+    "title": "Elden Ring",
+    "steamAppId": "1245620",
+    "protonTier": "platinum",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install and play with the default Proton; EasyAntiCheat is Proton-enabled and online play works.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1245620",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "baldurs-gate-3": {
+    "slug": "baldurs-gate-3",
+    "title": "Baldur's Gate 3",
+    "steamAppId": "1086940",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install and play; it runs great via Proton on desktop and has a native build path on Steam Deck.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1086940",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "cyberpunk-2077": {
+    "slug": "cyberpunk-2077",
+    "title": "Cyberpunk 2077",
+    "steamAppId": "1091500",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install and play with the default Proton; no anti-cheat and excellent compatibility.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1091500",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dead-by-daylight": {
+    "slug": "dead-by-daylight",
+    "title": "Dead by Daylight",
+    "steamAppId": "381210",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Use the Steam version with default Proton; the developer enabled EasyAntiCheat for Proton.",
+    "warningNote": "Only the Steam build works; the Epic Games Store version of EAC is not Proton-enabled.",
+    "confidence": "medium",
+    "sourceUrl": "https://www.protondb.com/app/381210",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "helldivers-2": {
+    "slug": "helldivers-2",
+    "title": "Helldivers 2",
+    "steamAppId": "553850",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "playable",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install and play with a recent Proton (Proton-GE or Experimental helps); nProtect GameGuard runs in user space and works.",
+    "warningNote": "nProtect GameGuard works on Linux but has no kernel access; occasional patches can temporarily break compatibility.",
+    "confidence": "medium",
+    "sourceUrl": "https://www.protondb.com/app/553850",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dota-2": {
+    "slug": "dota-2",
+    "title": "Dota 2",
+    "steamAppId": "570",
+    "protonTier": "native",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Just install and play; Dota 2 has a native Linux build and VAC works.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/570",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "team-fortress-2": {
+    "slug": "team-fortress-2",
+    "title": "Team Fortress 2",
+    "steamAppId": "440",
+    "protonTier": "native",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "verified",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Just install and play; TF2 has a native Linux build and VAC works.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/440",
+    "citations": [
+      {
+        "title": "GamingOnLinux anti-cheat list",
+        "url": "https://www.gamingonlinux.com/anticheat/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "genshin-impact": {
+    "slug": "genshin-impact",
+    "title": "Genshin Impact",
+    "steamAppId": "",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unsupported",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "No safe Linux path: HoYoverse’s kernel-level anti-cheat (mhyprot) is not supported on Linux and playing via Wine risks a ban. Use Windows, console, or mobile.",
+    "warningNote": "Running Genshin Impact on Linux through Wine or unofficial launchers can get your HoYoverse account banned.",
+    "confidence": "medium",
+    "sourceUrl": "https://areweanticheatyet.com/",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://areweanticheatyet.com/"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "minecraft": {
+    "slug": "minecraft",
+    "title": "Minecraft (Java Edition)",
+    "steamAppId": "",
+    "protonTier": "native",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "playable",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Minecraft Java Edition runs natively on Linux via the official launcher (or Prism/MultiMC). Bedrock Edition has no native Linux build.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.minecraft.net/en-us/download",
+    "citations": [
+      {
+        "title": "Minecraft official download",
+        "url": "https://www.minecraft.net/en-us/download"
+      }
+    ],
+    "dataSource": "overlay",
+    "lastCheckedAt": "2026-06-19"
+  }
+}

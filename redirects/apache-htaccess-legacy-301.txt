@@ -1,0 +1,40 @@
+# Legacy NeTraverse / Win4Lin redirects for Apache.
+# Use only if Apache, not Cloudflare Pages or Nginx, owns redirects.
+
+RewriteEngine On
+
+RedirectMatch 301 ^/products/index\.php$ /win4lin/
+RedirectMatch 301 ^/products/win4lin/index\.php$ /win4lin/
+RedirectMatch 301 ^/products/win4lin30/?$ /win4lin/3-0/
+RedirectMatch 301 ^/products/win4lin30/index\.php$ /win4lin/3-0/
+RedirectMatch 301 ^/products/win4lin40/?$ /win4lin/4-0/
+RedirectMatch 301 ^/products/win4lin40/index\.php$ /win4lin/4-0/
+RedirectMatch 301 ^/products/win4lin40/features\.php$ /win4lin/4-0/features/
+RedirectMatch 301 ^/products/win4lin40/requirements\.php$ /win4lin/4-0/requirements/
+RedirectMatch 301 ^/products/win4lin40/benefits\.php$ /win4lin/4-0/benefits/
+RedirectMatch 301 ^/products/win4lin50/?$ /win4lin/5-0/
+RedirectMatch 301 ^/products/win4lin50/index\.php$ /win4lin/5-0/
+RedirectMatch 301 ^/products/win4lin50/requirements\.php$ /win4lin/5-0/requirements/
+RedirectMatch 301 ^/products/wts/?$ /win4lin/terminal-server/
+RedirectMatch 301 ^/products/wts/benefits\.php$ /win4lin/terminal-server/benefits/
+RedirectMatch 301 ^/products/wts/features\.php$ /win4lin/terminal-server/features/
+RedirectMatch 301 ^/products/wts/requirements\.php$ /win4lin/terminal-server/requirements/
+RedirectMatch 301 ^/products/wts/technology\.php$ /win4lin/terminal-server/technology/
+RedirectMatch 301 ^/support/docs/Win4Lin-whitepapers\.php$ /win4lin/whitepapers/
+RedirectMatch 301 ^/support/docs/win4lin-whitepapers\.php$ /win4lin/whitepapers/
+RedirectMatch 301 ^/support/docs/Win4Lin-whitepapers$ /win4lin/whitepapers/
+RedirectMatch 301 ^/support/docs/win4lin-50-relnote\.html$ /win4lin/5-0/release-notes/
+RedirectMatch 301 ^/support/docs/400_relnotes\.html$ /win4lin/4-0/release-notes/
+RedirectMatch 301 ^/support/win4lin/downloads/kernel_patch/updates\.php$ /win4lin/kernel-patches/
+RedirectMatch 301 ^/member/downloads/?$ /win4lin/kernel-patches/
+RedirectMatch 301 ^/member/downloads/.*$ /win4lin/kernel-patches/
+RedirectMatch 301 ^/support/docs/?$ /win4lin/whitepapers/
+RedirectMatch 301 ^/support/docs/.*$ /win4lin/whitepapers/
+RedirectMatch 301 ^/support/?$ /win4lin/
+RedirectMatch 301 ^/support/.*$ /win4lin/
+RedirectMatch 301 ^/downloads?(/.*)?$ /win4lin/
+RedirectMatch 301 ^/(store|cart|buy)(/.*)?$ /win4lin/
+RedirectMatch 301 ^/lists/?$ /win4lin/
+RedirectMatch 301 ^/lists/.*$ /win4lin/
+RedirectMatch 301 ^/win4lin40(/.*)?$ /win4lin/4-0/
+RedirectMatch 301 ^/win4lin5(/.*)?$ /win4lin/5-0/

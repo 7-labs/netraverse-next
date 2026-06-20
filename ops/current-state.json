@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "project": "netraverse-com",
+  "productionUrl": "https://www.netraverse.com",
+  "cloudflarePagesProject": "netraverse-com",
+  "runtime": {
+    "framework": "Next.js",
+    "output": "static",
+    "requiresPagesFunctions": false,
+    "requiresDatabase": false
+  },
+  "cloudflareControlPlane": {
+    "lastCheckedAt": "2026-06-20T07:21:41Z",
+    "pagesProjectCreated": true,
+    "pagesProjectSubdomain": "netraverse-com.pages.dev",
+    "pagesProductionBranch": "main",
+    "pagesDeployments": 1,
+    "latestDeployment": {
+      "id": "c67b4f81-3d7d-4ae7-b4de-b6eb168c5117",
+      "url": "https://c67b4f81.netraverse-com.pages.dev",
+      "environment": "production",
+      "latestStageStatus": "success",
+      "createdOn": "2026-06-20T04:42:59.961519Z"
+    },
+    "customDomains": [
+      {
+        "name": "netraverse.com",
+        "status": "active",
+        "createdOn": "2026-06-20T04:49:44.898505Z"
+      },
+      {
+        "name": "www.netraverse.com",
+        "status": "active",
+        "createdOn": "2026-06-20T04:49:43.86441Z"
+      }
+    ],
+    "zoneStatus": "active",
+    "cloudflareZone": {
+      "name": "netraverse.com",
+      "status": "active",
+      "nameServers": [
+        "raegan.ns.cloudflare.com",
+        "simon.ns.cloudflare.com"
+      ],
+      "dnsRecords": [
+        {
+          "name": "netraverse.com",
+          "type": "CNAME",
+          "content": "netraverse-com.pages.dev",
+          "proxied": true
+        },
+        {
+          "name": "www.netraverse.com",
+          "type": "CNAME",
+          "content": "netraverse-com.pages.dev",
+          "proxied": true
+        }
+      ]
+    },
+    "redirectRules": [
+      {
+        "ref": "netraverse_apex_to_www",
+        "phase": "http_request_dynamic_redirect",
+        "expression": "(http.host eq \"netraverse.com\")",
+        "target": "https://www.netraverse.com + path",
+        "statusCode": 301,
+        "enabled": true
+      }
+    ],
+    "observedNameservers": [
+      "raegan.ns.cloudflare.com",
+      "simon.ns.cloudflare.com"
+    ]
+  },
+  "sourceState": {
+    "status": "deployed-to-cloudflare-pages",
+    "requiredCommands": [
+      "npm run validate:r2",
+      "npm run build"
+    ]
+  },
+  "productionState": {
+    "status": "live",
+    "blockers": [],
+    "residualRisks": [
+      "This Mac's system resolver intermittently returned old 198.18.* parking cache immediately after cutover; authoritative Cloudflare DNS and OpenClaw browser QA pass."
+    ]
+  },
+  "lastSourceValidation": {
+    "status": "ok",
+    "command": "npm run validate:r2"
+  },
+  "lastProductionValidation": {
+    "status": "ok",
+    "pagesPreview": {
+      "status": "ok",
+      "url": "https://netraverse-com.pages.dev/",
+      "browserQa": "passed"
+    },
+    "customDomain": {
+      "status": "ok",
+      "url": "https://www.netraverse.com/",
+      "browserQa": "passed",
+      "httpProbes": [
+        "/",
+        "/games/genshin-impact/",
+        "/content/run-windows-apps-on-linux/",
+        "/tools/",
+        "/robots.txt",
+        "/sitemap.xml"
+      ]
+    }
+  },
+  "lastBrowserValidation": {
+    "status": "ok",
+    "target": "https://www.netraverse.com/",
+    "runner": "OpenClaw Chromium",
+    "checked": [
+      "/",
+      "/games/genshin-impact/",
+      "/games/minecraft/",
+      "/content/run-windows-apps-on-linux/",
+      "/tools/",
+      "/products/index.php"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+name: Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_UMAMI_SITE_ID: ${{ vars.NEXT_PUBLIC_UMAMI_SITE_ID }}
+      NEXT_PUBLIC_UMAMI_SCRIPT_URL: ${{ vars.NEXT_PUBLIC_UMAMI_SCRIPT_URL }}
+      NEXT_PUBLIC_REQUEST_FORM_ENDPOINT: ${{ vars.NEXT_PUBLIC_REQUEST_FORM_ENDPOINT }}
+      NEXT_PUBLIC_REQUEST_EMAIL: ${{ vars.NEXT_PUBLIC_REQUEST_EMAIL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate compatibility data
+        run: npm run validate:r2
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Validate launch surface
+        run: npm run validate:launch
+
+      - name: Deploy to Cloudflare Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name=${{ vars.CF_PAGES_PROJECT_NAME || 'netraverse-com' }} --branch=${{ github.ref_name }}

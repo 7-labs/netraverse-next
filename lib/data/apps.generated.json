@@ -1,0 +1,1869 @@
+{
+  "vlc": {
+    "slug": "vlc",
+    "title": "VLC",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of VLC (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.videolan.VLC",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.videolan.VLC"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "obs-studio": {
+    "slug": "obs-studio",
+    "title": "OBS Studio",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of OBS Studio (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.obsproject.Studio",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.obsproject.Studio"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "gimp": {
+    "slug": "gimp",
+    "title": "GIMP",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of GIMP (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.gimp.GIMP",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.gimp.GIMP"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "inkscape": {
+    "slug": "inkscape",
+    "title": "Inkscape",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Inkscape (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.inkscape.Inkscape",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.inkscape.Inkscape"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "krita": {
+    "slug": "krita",
+    "title": "Krita",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Krita (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.kde.krita",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.kde.krita"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "blender": {
+    "slug": "blender",
+    "title": "Blender",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Blender (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.blender.Blender",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.blender.Blender"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "audacity": {
+    "slug": "audacity",
+    "title": "Audacity",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Audacity (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.audacityteam.Audacity",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.audacityteam.Audacity"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "spotify": {
+    "slug": "spotify",
+    "title": "Spotify",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Spotify (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.spotify.Client",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.spotify.Client"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "discord": {
+    "slug": "discord",
+    "title": "Discord",
+    "category": "communication",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Discord (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.discordapp.Discord",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.discordapp.Discord"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "slack": {
+    "slug": "slack",
+    "title": "Slack",
+    "category": "communication",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Slack (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.slack.Slack",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.slack.Slack"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "zoom": {
+    "slug": "zoom",
+    "title": "Zoom",
+    "category": "communication",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Zoom (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/us.zoom.Zoom",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/us.zoom.Zoom"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "telegram": {
+    "slug": "telegram",
+    "title": "Telegram",
+    "category": "communication",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Telegram (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.telegram.desktop",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.telegram.desktop"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "signal": {
+    "slug": "signal",
+    "title": "Signal",
+    "category": "communication",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Signal (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.signal.Signal",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.signal.Signal"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "thunderbird": {
+    "slug": "thunderbird",
+    "title": "Thunderbird",
+    "category": "communication",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Thunderbird (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.mozilla.Thunderbird",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.mozilla.Thunderbird"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "firefox": {
+    "slug": "firefox",
+    "title": "Firefox",
+    "category": "browser",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Firefox (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.mozilla.firefox",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.mozilla.firefox"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "google-chrome": {
+    "slug": "google-chrome",
+    "title": "Google Chrome",
+    "category": "browser",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Google Chrome (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.google.Chrome",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.google.Chrome"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "chromium": {
+    "slug": "chromium",
+    "title": "Chromium",
+    "category": "browser",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Chromium (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.chromium.Chromium",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.chromium.Chromium"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "brave": {
+    "slug": "brave",
+    "title": "Brave Browser",
+    "category": "browser",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Brave Browser (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.brave.Browser",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.brave.Browser"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "vscode": {
+    "slug": "vscode",
+    "title": "Visual Studio Code",
+    "category": "development",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Visual Studio Code (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.visualstudio.code",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.visualstudio.code"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "vscodium": {
+    "slug": "vscodium",
+    "title": "VSCodium",
+    "category": "development",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of VSCodium (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.vscodium.codium",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.vscodium.codium"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "steam": {
+    "slug": "steam",
+    "title": "Steam",
+    "category": "gaming",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Steam (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.valvesoftware.Steam",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.valvesoftware.Steam"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "bottles": {
+    "slug": "bottles",
+    "title": "Bottles",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Bottles (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.usebottles.bottles",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.usebottles.bottles"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "kdenlive": {
+    "slug": "kdenlive",
+    "title": "Kdenlive",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Kdenlive (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.kde.kdenlive",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.kde.kdenlive"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "shotcut": {
+    "slug": "shotcut",
+    "title": "Shotcut",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Shotcut (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.shotcut.Shotcut",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.shotcut.Shotcut"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "libreoffice": {
+    "slug": "libreoffice",
+    "title": "LibreOffice",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of LibreOffice (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.libreoffice.LibreOffice",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.libreoffice.LibreOffice"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "onlyoffice": {
+    "slug": "onlyoffice",
+    "title": "OnlyOffice",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of OnlyOffice (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.onlyoffice.desktopeditors",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.onlyoffice.desktopeditors"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "darktable": {
+    "slug": "darktable",
+    "title": "Darktable",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Darktable (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.darktable.Darktable",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.darktable.Darktable"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "handbrake": {
+    "slug": "handbrake",
+    "title": "HandBrake",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of HandBrake (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/fr.handbrake.ghb",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/fr.handbrake.ghb"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "notion": {
+    "slug": "notion",
+    "title": "Notion",
+    "category": "productivity",
+    "verdict": "web",
+    "wineRating": "na",
+    "nativeAvailable": false,
+    "webVersion": true,
+    "bestMethod": "Use Notion in the browser on Linux.",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "web",
+    "difficulty": 3,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "postman": {
+    "slug": "postman",
+    "title": "Postman",
+    "category": "development",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Postman (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.getpostman.Postman",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.getpostman.Postman"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "dbeaver": {
+    "slug": "dbeaver",
+    "title": "DBeaver",
+    "category": "development",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of DBeaver (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/io.dbeaver.DBeaverCommunity",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/io.dbeaver.DBeaverCommunity"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "joplin": {
+    "slug": "joplin",
+    "title": "Joplin",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Joplin (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/net.cozic.joplin_desktop",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/net.cozic.joplin_desktop"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "obsidian": {
+    "slug": "obsidian",
+    "title": "Obsidian",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Obsidian (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/md.obsidian.Obsidian",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/md.obsidian.Obsidian"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "filezilla": {
+    "slug": "filezilla",
+    "title": "FileZilla",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of FileZilla (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "qbittorrent": {
+    "slug": "qbittorrent",
+    "title": "qBittorrent",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of qBittorrent (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.qbittorrent.qBittorrent",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.qbittorrent.qBittorrent"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "keepassxc": {
+    "slug": "keepassxc",
+    "title": "KeePassXC",
+    "category": "security",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of KeePassXC (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.keepassxc.KeePassXC",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.keepassxc.KeePassXC"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "bitwarden": {
+    "slug": "bitwarden",
+    "title": "Bitwarden",
+    "category": "security",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Bitwarden (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.bitwarden.desktop",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.bitwarden.desktop"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "onepassword": {
+    "slug": "onepassword",
+    "title": "1Password",
+    "category": "security",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of 1Password (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "virtualbox": {
+    "slug": "virtualbox",
+    "title": "VirtualBox",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of VirtualBox (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 3,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "gnome-boxes": {
+    "slug": "gnome-boxes",
+    "title": "GNOME Boxes",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of GNOME Boxes (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.gnome.Boxes",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.gnome.Boxes"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "transmission": {
+    "slug": "transmission",
+    "title": "Transmission",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Transmission (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.transmissionbt.Transmission",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.transmissionbt.Transmission"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "peazip": {
+    "slug": "peazip",
+    "title": "PeaZip",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of PeaZip (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/io.github.peazip.PeaZip",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/io.github.peazip.PeaZip"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "calibre": {
+    "slug": "calibre",
+    "title": "Calibre",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Calibre (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.calibre_ebook.calibre",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.calibre_ebook.calibre"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "rawtherapee": {
+    "slug": "rawtherapee",
+    "title": "RawTherapee",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of RawTherapee (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.rawtherapee.RawTherapee",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.rawtherapee.RawTherapee"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "digikam": {
+    "slug": "digikam",
+    "title": "digiKam",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of digiKam (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.kde.digikam",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.kde.digikam"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "pinta": {
+    "slug": "pinta",
+    "title": "Pinta",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Pinta (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.github.PintaProject.Pinta",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.github.PintaProject.Pinta"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "scribus": {
+    "slug": "scribus",
+    "title": "Scribus",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Scribus (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/net.scribus.Scribus",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/net.scribus.Scribus"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "flameshot": {
+    "slug": "flameshot",
+    "title": "Flameshot",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Flameshot (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.flameshot.Flameshot",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.flameshot.Flameshot"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "remmina": {
+    "slug": "remmina",
+    "title": "Remmina",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Remmina (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.remmina.Remmina",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.remmina.Remmina"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "wireshark": {
+    "slug": "wireshark",
+    "title": "Wireshark",
+    "category": "security",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Wireshark (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.wireshark.Wireshark",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.wireshark.Wireshark"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "nextcloud": {
+    "slug": "nextcloud",
+    "title": "Nextcloud Desktop",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Nextcloud Desktop (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "syncthing-gtk": {
+    "slug": "syncthing-gtk",
+    "title": "Syncthing GTK",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Syncthing GTK (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/me.kozec.syncthingtk",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/me.kozec.syncthingtk"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "freetube": {
+    "slug": "freetube",
+    "title": "FreeTube",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of FreeTube (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/io.freetubeapp.FreeTube",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/io.freetubeapp.FreeTube"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "celluloid": {
+    "slug": "celluloid",
+    "title": "Celluloid",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Celluloid (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/io.github.celluloid_player.Celluloid",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/io.github.celluloid_player.Celluloid"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "mpv": {
+    "slug": "mpv",
+    "title": "mpv",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of mpv (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "arduino-ide": {
+    "slug": "arduino-ide",
+    "title": "Arduino IDE",
+    "category": "development",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Arduino IDE (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/cc.arduino.IDE2",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/cc.arduino.IDE2"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "drawio": {
+    "slug": "drawio",
+    "title": "draw.io Desktop",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of draw.io Desktop (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/com.jgraph.drawio.desktop",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/com.jgraph.drawio.desktop"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "fedora-media-writer": {
+    "slug": "fedora-media-writer",
+    "title": "Fedora Media Writer",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Fedora Media Writer (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.fedoraproject.MediaWriter",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.fedoraproject.MediaWriter"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "balena-etcher": {
+    "slug": "balena-etcher",
+    "title": "balenaEtcher",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of balenaEtcher (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "timeshift": {
+    "slug": "timeshift",
+    "title": "Timeshift",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Timeshift (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "ventoy": {
+    "slug": "ventoy",
+    "title": "Ventoy",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Ventoy (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 3,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "codeblocks": {
+    "slug": "codeblocks",
+    "title": "Code::Blocks",
+    "category": "development",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Code::Blocks (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "fritzing": {
+    "slug": "fritzing",
+    "title": "Fritzing",
+    "category": "engineering",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Fritzing (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 3,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "davinci-resolve": {
+    "slug": "davinci-resolve",
+    "title": "DaVinci Resolve",
+    "category": "media",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of DaVinci Resolve (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 4,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "figma-linux": {
+    "slug": "figma-linux",
+    "title": "Figma (Figma Linux)",
+    "category": "creative",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Figma (Figma Linux) (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "p7zip": {
+    "slug": "p7zip",
+    "title": "7-Zip (p7zip)",
+    "category": "utility",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of 7-Zip (p7zip) (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "medium",
+    "sourceUrl": "https://flathub.org/",
+    "citations": [],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "okular": {
+    "slug": "okular",
+    "title": "Okular",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Okular (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.kde.okular",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.kde.okular"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "evince": {
+    "slug": "evince",
+    "title": "Evince Document Viewer",
+    "category": "productivity",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of Evince Document Viewer (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 1,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.gnome.Evince",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.gnome.Evince"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "gnucash": {
+    "slug": "gnucash",
+    "title": "GnuCash",
+    "category": "finance",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of GnuCash (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 2,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.gnucash.GnuCash",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.gnucash.GnuCash"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "kicad": {
+    "slug": "kicad",
+    "title": "KiCad",
+    "category": "engineering",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of KiCad (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 3,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.kicad.KiCad",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.kicad.KiCad"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  },
+  "freecad": {
+    "slug": "freecad",
+    "title": "FreeCAD",
+    "category": "engineering",
+    "verdict": "native",
+    "wineRating": "na",
+    "nativeAvailable": true,
+    "webVersion": false,
+    "bestMethod": "Install the native Linux build of FreeCAD (Flathub or your package manager).",
+    "whatBreaks": [],
+    "alternatives": [],
+    "migrationRisk": "low",
+    "recommendedAction": "native",
+    "difficulty": 3,
+    "notes": "",
+    "confidence": "high",
+    "sourceUrl": "https://flathub.org/apps/org.freecad.FreeCAD",
+    "citations": [
+      {
+        "title": "Flathub",
+        "url": "https://flathub.org/apps/org.freecad.FreeCAD"
+      }
+    ],
+    "dataSource": "flathub",
+    "lastCheckedAt": "2026-06-19",
+    "affiliate": null
+  }
+}

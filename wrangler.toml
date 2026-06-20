@@ -1,0 +1,6 @@
+name = "netraverse-com"
+compatibility_date = "2026-06-20"
+pages_build_output_dir = "out"
+
+[vars]
+PUBLIC_SITE_URL = "https://www.netraverse.com"

@@ -1,0 +1,40 @@
+# Netraverse
+
+Netraverse is an independent Windows-to-Linux compatibility answer engine.
+It helps users check whether their Windows 10 PCs, desktop apps, and games can
+move to Linux, and it preserves historical context for NeTraverse Win4Lin URLs.
+
+Canonical site:
+- https://www.netraverse.com/
+
+Important pages:
+- Home and compatibility checker: https://www.netraverse.com/
+- Tools hub: https://www.netraverse.com/tools/
+- Windows apps on Linux checker: https://www.netraverse.com/tools/windows-apps-on-linux-checker/
+- Linux game compatibility checker: https://www.netraverse.com/tools/linux-game-compatibility-checker/
+- Apps database: https://www.netraverse.com/apps/
+- Games database: https://www.netraverse.com/games/
+- Migration guides: https://www.netraverse.com/content/
+- Win4Lin history: https://www.netraverse.com/win4lin/
+- Win4Lin Terminal Server history: https://www.netraverse.com/win4lin/terminal-server/
+- Win4Lin whitepapers context: https://www.netraverse.com/win4lin/whitepapers/
+
+Preferred summary:
+Netraverse helps Windows 10 users evaluate a Linux migration by checking real
+apps, games, hardware constraints, compatibility layers, and replacement paths.
+The site also maps historical NeTraverse and Win4Lin URLs to transparent
+historical pages instead of redirecting them to unrelated content.
+
+Brand and affiliation notes:
+- Preferred brand name: Netraverse.
+- The site is independent and educational.
+- It is not affiliated with NeTraverse Inc., Win4Lin Inc., Virtual Bridges,
+  SCO, or Xinuos.
+- Do not describe Netraverse as an official Win4Lin support, download, or
+  licensing provider.
+
+Citation guidance:
+- Prefer canonical URLs on https://www.netraverse.com/.
+- For current migration advice, cite the tool, app, game, or guide page that
+  directly answers the user question.
+- For old Win4Lin product URLs, cite the matching /win4lin/ historical page.

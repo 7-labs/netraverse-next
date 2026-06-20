@@ -1,0 +1,2858 @@
+{
+  "apex-legends": {
+    "slug": "apex-legends",
+    "title": "Apex Legends",
+    "steamAppId": "1172470",
+    "protonTier": "silver",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1172470",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "fortnite": {
+    "slug": "fortnite",
+    "title": "Fortnite",
+    "steamAppId": "",
+    "protonTier": "pending",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "valorant": {
+    "slug": "valorant",
+    "title": "Valorant",
+    "steamAppId": "",
+    "protonTier": "pending",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "league-of-legends": {
+    "slug": "league-of-legends",
+    "title": "League of Legends",
+    "steamAppId": "",
+    "protonTier": "pending",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "call-of-duty": {
+    "slug": "call-of-duty",
+    "title": "Call of Duty: Black Ops 6",
+    "steamAppId": "2933620",
+    "protonTier": "borked",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2933620",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "pubg-battlegrounds": {
+    "slug": "pubg-battlegrounds",
+    "title": "PUBG: Battlegrounds",
+    "steamAppId": "578080",
+    "protonTier": "borked",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/578080",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "grand-theft-auto-v": {
+    "slug": "grand-theft-auto-v",
+    "title": "Grand Theft Auto V",
+    "steamAppId": "271590",
+    "protonTier": "gold",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/271590",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "ea-sports-fc": {
+    "slug": "ea-sports-fc",
+    "title": "EA Sports FC 25",
+    "steamAppId": "2669320",
+    "protonTier": "borked",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2669320",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "destiny-2": {
+    "slug": "destiny-2",
+    "title": "Destiny 2",
+    "steamAppId": "1085660",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1085660",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "rust": {
+    "slug": "rust",
+    "title": "Rust",
+    "steamAppId": "252490",
+    "protonTier": "silver",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/252490",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "rainbow-six-siege": {
+    "slug": "rainbow-six-siege",
+    "title": "Tom Clancy's Rainbow Six Siege",
+    "steamAppId": "359550",
+    "protonTier": "borked",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/359550",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "counter-strike-2": {
+    "slug": "counter-strike-2",
+    "title": "Counter-Strike 2",
+    "steamAppId": "730",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/730",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dota-2": {
+    "slug": "dota-2",
+    "title": "Dota 2",
+    "steamAppId": "570",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/570",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "team-fortress-2": {
+    "slug": "team-fortress-2",
+    "title": "Team Fortress 2",
+    "steamAppId": "440",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/440",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "cyberpunk-2077": {
+    "slug": "cyberpunk-2077",
+    "title": "Cyberpunk 2077",
+    "steamAppId": "1091500",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1091500",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1091500"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "elden-ring": {
+    "slug": "elden-ring",
+    "title": "Elden Ring",
+    "steamAppId": "1245620",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1245620",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "baldurs-gate-3": {
+    "slug": "baldurs-gate-3",
+    "title": "Baldur's Gate 3",
+    "steamAppId": "1086940",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1086940",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1086940"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-witcher-3-wild-hunt": {
+    "slug": "the-witcher-3-wild-hunt",
+    "title": "The Witcher 3: Wild Hunt",
+    "steamAppId": "292030",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/292030",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/292030"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "red-dead-redemption-2": {
+    "slug": "red-dead-redemption-2",
+    "title": "Red Dead Redemption 2",
+    "steamAppId": "1174180",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1174180",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1174180"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "stardew-valley": {
+    "slug": "stardew-valley",
+    "title": "Stardew Valley",
+    "steamAppId": "413150",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/413150",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/413150"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hades": {
+    "slug": "hades",
+    "title": "Hades",
+    "steamAppId": "1145360",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1145360",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1145360"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hollow-knight": {
+    "slug": "hollow-knight",
+    "title": "Hollow Knight",
+    "steamAppId": "367520",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/367520",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/367520"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "terraria": {
+    "slug": "terraria",
+    "title": "Terraria",
+    "steamAppId": "105600",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/105600",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/105600"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "helldivers-2": {
+    "slug": "helldivers-2",
+    "title": "Helldivers 2",
+    "steamAppId": "553850",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/553850",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "palworld": {
+    "slug": "palworld",
+    "title": "Palworld",
+    "steamAppId": "1623730",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1623730",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1623730"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "warframe": {
+    "slug": "warframe",
+    "title": "Warframe",
+    "steamAppId": "230410",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/230410",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "rocket-league": {
+    "slug": "rocket-league",
+    "title": "Rocket League",
+    "steamAppId": "252950",
+    "protonTier": "platinum",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/252950",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dead-by-daylight": {
+    "slug": "dead-by-daylight",
+    "title": "Dead by Daylight",
+    "steamAppId": "381210",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/381210",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "war-thunder": {
+    "slug": "war-thunder",
+    "title": "War Thunder",
+    "steamAppId": "236390",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/236390",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "gtfo": {
+    "slug": "gtfo",
+    "title": "GTFO",
+    "steamAppId": "782270",
+    "protonTier": "pending",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "unknown",
+    "bestMethod": "Compatibility is uncertain — check recent ProtonDB reports before relying on it.",
+    "warningNote": "Limited ProtonDB data so far — check recent reports before relying on it.",
+    "confidence": "low",
+    "sourceUrl": "https://www.protondb.com/app/782270",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/782270"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "sea-of-thieves": {
+    "slug": "sea-of-thieves",
+    "title": "Sea of Thieves",
+    "steamAppId": "1172620",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1172620",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "forza-horizon-5": {
+    "slug": "forza-horizon-5",
+    "title": "Forza Horizon 5",
+    "steamAppId": "1551360",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1551360",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1551360"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "starfield": {
+    "slug": "starfield",
+    "title": "Starfield",
+    "steamAppId": "1716740",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1716740",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1716740"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hogwarts-legacy": {
+    "slug": "hogwarts-legacy",
+    "title": "Hogwarts Legacy",
+    "steamAppId": "990080",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/990080",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/990080"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "marvel-rivals": {
+    "slug": "marvel-rivals",
+    "title": "Marvel Rivals",
+    "steamAppId": "2767030",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2767030",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "roblox": {
+    "slug": "roblox",
+    "title": "Roblox",
+    "steamAppId": "",
+    "protonTier": "pending",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "overwatch-2": {
+    "slug": "overwatch-2",
+    "title": "Overwatch 2",
+    "steamAppId": "2357570",
+    "protonTier": "platinum",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2357570",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hunt-showdown-1896": {
+    "slug": "hunt-showdown-1896",
+    "title": "Hunt: Showdown 1896",
+    "steamAppId": "594650",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/594650",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "naraka-bladepoint": {
+    "slug": "naraka-bladepoint",
+    "title": "Naraka: Bladepoint",
+    "steamAppId": "1203220",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1203220",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "lost-ark": {
+    "slug": "lost-ark",
+    "title": "Lost Ark",
+    "steamAppId": "1599340",
+    "protonTier": "bronze",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1599340",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "new-world": {
+    "slug": "new-world",
+    "title": "New World",
+    "steamAppId": "1063730",
+    "protonTier": "silver",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works-with-tweaks",
+    "bestMethod": "Playable via Steam Proton; may need launch options or Proton-GE.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1063730",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "black-desert-online": {
+    "slug": "black-desert-online",
+    "title": "Black Desert Online",
+    "steamAppId": "582660",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/582660",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "path-of-exile": {
+    "slug": "path-of-exile",
+    "title": "Path of Exile",
+    "steamAppId": "238960",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/238960",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/238960"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "path-of-exile-2": {
+    "slug": "path-of-exile-2",
+    "title": "Path of Exile 2",
+    "steamAppId": "2694490",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2694490",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2694490"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "diablo-iv": {
+    "slug": "diablo-iv",
+    "title": "Diablo IV",
+    "steamAppId": "2344520",
+    "protonTier": "platinum",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2344520",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hades-ii": {
+    "slug": "hades-ii",
+    "title": "Hades II",
+    "steamAppId": "1145350",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1145350",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1145350"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dark-souls-iii": {
+    "slug": "dark-souls-iii",
+    "title": "Dark Souls III",
+    "steamAppId": "374320",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/374320",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/374320"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "monster-hunter-world": {
+    "slug": "monster-hunter-world",
+    "title": "Monster Hunter: World",
+    "steamAppId": "582010",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/582010",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/582010"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "monster-hunter-rise": {
+    "slug": "monster-hunter-rise",
+    "title": "Monster Hunter Rise",
+    "steamAppId": "1446780",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1446780",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1446780"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "sekiro-shadows-die-twice": {
+    "slug": "sekiro-shadows-die-twice",
+    "title": "Sekiro: Shadows Die Twice",
+    "steamAppId": "814380",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/814380",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/814380"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "divinity-original-sin-2": {
+    "slug": "divinity-original-sin-2",
+    "title": "Divinity: Original Sin 2",
+    "steamAppId": "435150",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/435150",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/435150"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "final-fantasy-xiv": {
+    "slug": "final-fantasy-xiv",
+    "title": "Final Fantasy XIV Online",
+    "steamAppId": "39210",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/39210",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/39210"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "final-fantasy-xvi": {
+    "slug": "final-fantasy-xvi",
+    "title": "Final Fantasy XVI",
+    "steamAppId": "2515020",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2515020",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2515020"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "deep-rock-galactic": {
+    "slug": "deep-rock-galactic",
+    "title": "Deep Rock Galactic",
+    "steamAppId": "548430",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/548430",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/548430"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "risk-of-rain-2": {
+    "slug": "risk-of-rain-2",
+    "title": "Risk of Rain 2",
+    "steamAppId": "632360",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/632360",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/632360"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "valheim": {
+    "slug": "valheim",
+    "title": "Valheim",
+    "steamAppId": "892970",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/892970",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/892970"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "satisfactory": {
+    "slug": "satisfactory",
+    "title": "Satisfactory",
+    "steamAppId": "526870",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/526870",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/526870"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "subnautica": {
+    "slug": "subnautica",
+    "title": "Subnautica",
+    "steamAppId": "264710",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/264710",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/264710"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "no-mans-sky": {
+    "slug": "no-mans-sky",
+    "title": "No Man's Sky",
+    "steamAppId": "275850",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/275850",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/275850"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "ark-survival-ascended": {
+    "slug": "ark-survival-ascended",
+    "title": "ARK: Survival Ascended",
+    "steamAppId": "2399830",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2399830",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "7-days-to-die": {
+    "slug": "7-days-to-die",
+    "title": "7 Days to Die",
+    "steamAppId": "251570",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/251570",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "sons-of-the-forest": {
+    "slug": "sons-of-the-forest",
+    "title": "Sons of the Forest",
+    "steamAppId": "1326470",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1326470",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1326470"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "among-us": {
+    "slug": "among-us",
+    "title": "Among Us",
+    "steamAppId": "945360",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/945360",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/945360"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "phasmophobia": {
+    "slug": "phasmophobia",
+    "title": "Phasmophobia",
+    "steamAppId": "739630",
+    "protonTier": "platinum",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/739630",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "left-4-dead-2": {
+    "slug": "left-4-dead-2",
+    "title": "Left 4 Dead 2",
+    "steamAppId": "550",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/550",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "portal-2": {
+    "slug": "portal-2",
+    "title": "Portal 2",
+    "steamAppId": "620",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/620",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/620"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "half-life-alyx": {
+    "slug": "half-life-alyx",
+    "title": "Half-Life: Alyx",
+    "steamAppId": "546560",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/546560",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/546560"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "detroit-become-human": {
+    "slug": "detroit-become-human",
+    "title": "Detroit: Become Human",
+    "steamAppId": "1222140",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1222140",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1222140"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "god-of-war": {
+    "slug": "god-of-war",
+    "title": "God of War",
+    "steamAppId": "1593500",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1593500",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1593500"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "marvels-spider-man-remastered": {
+    "slug": "marvels-spider-man-remastered",
+    "title": "Marvel's Spider-Man Remastered",
+    "steamAppId": "1817070",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1817070",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1817070"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "grand-theft-auto-iv": {
+    "slug": "grand-theft-auto-iv",
+    "title": "Grand Theft Auto IV",
+    "steamAppId": "12210",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/12210",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/12210"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-elder-scrolls-v-skyrim-special-edition": {
+    "slug": "the-elder-scrolls-v-skyrim-special-edition",
+    "title": "The Elder Scrolls V: Skyrim Special Edition",
+    "steamAppId": "489830",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/489830",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/489830"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "fallout-4": {
+    "slug": "fallout-4",
+    "title": "Fallout 4",
+    "steamAppId": "377160",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/377160",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/377160"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "disco-elysium": {
+    "slug": "disco-elysium",
+    "title": "Disco Elysium",
+    "steamAppId": "632470",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/632470",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/632470"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "celeste": {
+    "slug": "celeste",
+    "title": "Celeste",
+    "steamAppId": "504230",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/504230",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/504230"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "ori-and-the-will-of-the-wisps": {
+    "slug": "ori-and-the-will-of-the-wisps",
+    "title": "Ori and the Will of the Wisps",
+    "steamAppId": "1057090",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1057090",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1057090"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "cuphead": {
+    "slug": "cuphead",
+    "title": "Cuphead",
+    "steamAppId": "268910",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/268910",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/268910"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "undertale": {
+    "slug": "undertale",
+    "title": "Undertale",
+    "steamAppId": "391540",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/391540",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/391540"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "factorio": {
+    "slug": "factorio",
+    "title": "Factorio",
+    "steamAppId": "427520",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/427520",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/427520"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "cities-skylines": {
+    "slug": "cities-skylines",
+    "title": "Cities: Skylines",
+    "steamAppId": "255710",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/255710",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/255710"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "cities-skylines-ii": {
+    "slug": "cities-skylines-ii",
+    "title": "Cities: Skylines II",
+    "steamAppId": "949230",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/949230",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/949230"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "europa-universalis-iv": {
+    "slug": "europa-universalis-iv",
+    "title": "Europa Universalis IV",
+    "steamAppId": "236850",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/236850",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/236850"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "crusader-kings-iii": {
+    "slug": "crusader-kings-iii",
+    "title": "Crusader Kings III",
+    "steamAppId": "1158310",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1158310",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1158310"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hearts-of-iron-iv": {
+    "slug": "hearts-of-iron-iv",
+    "title": "Hearts of Iron IV",
+    "steamAppId": "394360",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/394360",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/394360"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "sid-meiers-civilization-vi": {
+    "slug": "sid-meiers-civilization-vi",
+    "title": "Sid Meier's Civilization VI",
+    "steamAppId": "289070",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/289070",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/289070"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "total-war-warhammer-iii": {
+    "slug": "total-war-warhammer-iii",
+    "title": "Total War: Warhammer III",
+    "steamAppId": "1142710",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1142710",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1142710"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "stellaris": {
+    "slug": "stellaris",
+    "title": "Stellaris",
+    "steamAppId": "281990",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/281990",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/281990"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "anno-1800": {
+    "slug": "anno-1800",
+    "title": "Anno 1800",
+    "steamAppId": "916440",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/916440",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/916440"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-sims-4": {
+    "slug": "the-sims-4",
+    "title": "The Sims 4",
+    "steamAppId": "1222670",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1222670",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1222670"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "planet-coaster": {
+    "slug": "planet-coaster",
+    "title": "Planet Coaster",
+    "steamAppId": "493340",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/493340",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/493340"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "two-point-hospital": {
+    "slug": "two-point-hospital",
+    "title": "Two Point Hospital",
+    "steamAppId": "535000",
+    "protonTier": "pending",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "unknown",
+    "bestMethod": "Compatibility is uncertain — check recent ProtonDB reports before relying on it.",
+    "warningNote": "Limited ProtonDB data so far — check recent reports before relying on it.",
+    "confidence": "low",
+    "sourceUrl": "https://www.protondb.com/app/535000",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/535000"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "warhammer-40000-space-marine-2": {
+    "slug": "warhammer-40000-space-marine-2",
+    "title": "Warhammer 40,000: Space Marine 2",
+    "steamAppId": "2183900",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2183900",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "black-myth-wukong": {
+    "slug": "black-myth-wukong",
+    "title": "Black Myth: Wukong",
+    "steamAppId": "2358720",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2358720",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2358720"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "ghostrunner-2": {
+    "slug": "ghostrunner-2",
+    "title": "Ghostrunner 2",
+    "steamAppId": "2144740",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2144740",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2144740"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dave-the-diver": {
+    "slug": "dave-the-diver",
+    "title": "Dave the Diver",
+    "steamAppId": "1868140",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1868140",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1868140"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "alan-wake-2": {
+    "slug": "alan-wake-2",
+    "title": "Alan Wake 2",
+    "steamAppId": "3611110",
+    "protonTier": "pending",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "unknown",
+    "bestMethod": "Compatibility is uncertain — check recent ProtonDB reports before relying on it.",
+    "warningNote": "Limited ProtonDB data so far — check recent reports before relying on it.",
+    "confidence": "low",
+    "sourceUrl": "https://www.protondb.com/app/3611110",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/3611110"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-binding-of-isaac-rebirth": {
+    "slug": "the-binding-of-isaac-rebirth",
+    "title": "The Binding of Isaac: Rebirth",
+    "steamAppId": "250900",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/250900",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/250900"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "slay-the-spire": {
+    "slug": "slay-the-spire",
+    "title": "Slay the Spire",
+    "steamAppId": "646570",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/646570",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/646570"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "vampire-survivors": {
+    "slug": "vampire-survivors",
+    "title": "Vampire Survivors",
+    "steamAppId": "1794680",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1794680",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1794680"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dont-starve-together": {
+    "slug": "dont-starve-together",
+    "title": "Don't Starve Together",
+    "steamAppId": "322330",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/322330",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/322330"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "rimworld": {
+    "slug": "rimworld",
+    "title": "RimWorld",
+    "steamAppId": "294100",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/294100",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/294100"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "oxygen-not-included": {
+    "slug": "oxygen-not-included",
+    "title": "Oxygen Not Included",
+    "steamAppId": "457140",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/457140",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/457140"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-elder-scrolls-online": {
+    "slug": "the-elder-scrolls-online",
+    "title": "The Elder Scrolls Online",
+    "steamAppId": "306130",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/306130",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/306130"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "grim-dawn": {
+    "slug": "grim-dawn",
+    "title": "Grim Dawn",
+    "steamAppId": "219990",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/219990",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/219990"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "monster-hunter-wilds": {
+    "slug": "monster-hunter-wilds",
+    "title": "Monster Hunter Wilds",
+    "steamAppId": "2246340",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2246340",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2246340"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-finals": {
+    "slug": "the-finals",
+    "title": "The Finals",
+    "steamAppId": "2073850",
+    "protonTier": "gold",
+    "antiCheatStatus": "broken",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Anti-cheat is currently broken on Linux.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2073850",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-elder-scrolls-iv-oblivion-remastered": {
+    "slug": "the-elder-scrolls-iv-oblivion-remastered",
+    "title": "The Elder Scrolls IV: Oblivion Remastered",
+    "steamAppId": "2623190",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2623190",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2623190"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "gunfire-reborn": {
+    "slug": "gunfire-reborn",
+    "title": "Gunfire Reborn",
+    "steamAppId": "1217060",
+    "protonTier": "gold",
+    "antiCheatStatus": "supported",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1217060",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "enter-the-gungeon": {
+    "slug": "enter-the-gungeon",
+    "title": "Enter the Gungeon",
+    "steamAppId": "311690",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/311690",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/311690"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dead-cells": {
+    "slug": "dead-cells",
+    "title": "Dead Cells",
+    "steamAppId": "588650",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/588650",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/588650"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "hotline-miami": {
+    "slug": "hotline-miami",
+    "title": "Hotline Miami",
+    "steamAppId": "219150",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/219150",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/219150"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-elder-scrolls-iii-morrowind": {
+    "slug": "the-elder-scrolls-iii-morrowind",
+    "title": "The Elder Scrolls III: Morrowind",
+    "steamAppId": "22320",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/22320",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/22320"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "borderlands-3": {
+    "slug": "borderlands-3",
+    "title": "Borderlands 3",
+    "steamAppId": "397540",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/397540",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/397540"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "borderlands-2": {
+    "slug": "borderlands-2",
+    "title": "Borderlands 2",
+    "steamAppId": "49520",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/49520",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/49520"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-outer-worlds": {
+    "slug": "the-outer-worlds",
+    "title": "The Outer Worlds",
+    "steamAppId": "578650",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/578650",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/578650"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "control": {
+    "slug": "control",
+    "title": "Control",
+    "steamAppId": "870780",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/870780",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/870780"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "death-stranding": {
+    "slug": "death-stranding",
+    "title": "Death Stranding",
+    "steamAppId": "1190460",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1190460",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1190460"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "horizon-zero-dawn": {
+    "slug": "horizon-zero-dawn",
+    "title": "Horizon Zero Dawn",
+    "steamAppId": "1151640",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1151640",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1151640"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "ghost-of-tsushima-directors-cut": {
+    "slug": "ghost-of-tsushima-directors-cut",
+    "title": "Ghost of Tsushima Director's Cut",
+    "steamAppId": "2215430",
+    "protonTier": "gold",
+    "antiCheatStatus": "denied",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "broken",
+    "bestMethod": "Anti-cheat blocks this on desktop Linux — keep a Windows install or play it elsewhere.",
+    "warningNote": "Publisher has not enabled anti-cheat for Linux / Steam Deck.",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2215430",
+    "citations": [
+      {
+        "title": "AreWeAntiCheatYet",
+        "url": "https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/master/games.json"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "the-last-of-us-part-i": {
+    "slug": "the-last-of-us-part-i",
+    "title": "The Last of Us Part I",
+    "steamAppId": "1888930",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1888930",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1888930"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "returnal": {
+    "slug": "returnal",
+    "title": "Returnal",
+    "steamAppId": "1649240",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1649240",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1649240"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "it-takes-two": {
+    "slug": "it-takes-two",
+    "title": "It Takes Two",
+    "steamAppId": "1426210",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1426210",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1426210"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "a-way-out": {
+    "slug": "a-way-out",
+    "title": "A Way Out",
+    "steamAppId": "1222700",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1222700",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1222700"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "split-fiction": {
+    "slug": "split-fiction",
+    "title": "Split Fiction",
+    "steamAppId": "2001120",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2001120",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2001120"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "frostpunk": {
+    "slug": "frostpunk",
+    "title": "Frostpunk",
+    "steamAppId": "323190",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/323190",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/323190"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "dyson-sphere-program": {
+    "slug": "dyson-sphere-program",
+    "title": "Dyson Sphere Program",
+    "steamAppId": "1366540",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1366540",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1366540"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "kingdom-come-deliverance-ii": {
+    "slug": "kingdom-come-deliverance-ii",
+    "title": "Kingdom Come: Deliverance II",
+    "steamAppId": "1771300",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1771300",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1771300"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "kingdom-come-deliverance": {
+    "slug": "kingdom-come-deliverance",
+    "title": "Kingdom Come: Deliverance",
+    "steamAppId": "379430",
+    "protonTier": "gold",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/379430",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/379430"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "nier-automata": {
+    "slug": "nier-automata",
+    "title": "NieR: Automata",
+    "steamAppId": "524220",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/524220",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/524220"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "persona-5-royal": {
+    "slug": "persona-5-royal",
+    "title": "Persona 5 Royal",
+    "steamAppId": "1687950",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1687950",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1687950"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "yakuza-like-a-dragon": {
+    "slug": "yakuza-like-a-dragon",
+    "title": "Yakuza: Like a Dragon",
+    "steamAppId": "1235140",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1235140",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1235140"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "like-a-dragon-infinite-wealth": {
+    "slug": "like-a-dragon-infinite-wealth",
+    "title": "Like a Dragon: Infinite Wealth",
+    "steamAppId": "2072450",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2072450",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2072450"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "clair-obscur-expedition-33": {
+    "slug": "clair-obscur-expedition-33",
+    "title": "Clair Obscur: Expedition 33",
+    "steamAppId": "1903340",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1903340",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1903340"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "balatro": {
+    "slug": "balatro",
+    "title": "Balatro",
+    "steamAppId": "2379780",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/2379780",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/2379780"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "lethal-company": {
+    "slug": "lethal-company",
+    "title": "Lethal Company",
+    "steamAppId": "1966720",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/1966720",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/1966720"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  },
+  "schedule-i": {
+    "slug": "schedule-i",
+    "title": "Schedule I",
+    "steamAppId": "3164500",
+    "protonTier": "platinum",
+    "antiCheatStatus": "none",
+    "steamDeckStatus": "unknown",
+    "desktopLinuxStatus": "works",
+    "bestMethod": "Install via Steam and run native or with Proton — it runs well on Linux.",
+    "warningNote": "",
+    "confidence": "high",
+    "sourceUrl": "https://www.protondb.com/app/3164500",
+    "citations": [
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/app/3164500"
+      }
+    ],
+    "dataSource": "protondb",
+    "lastCheckedAt": "2026-06-19"
+  }
+}
