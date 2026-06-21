@@ -1,11 +1,16 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
+import Icon from '../../components/Icon';
+import DepthSections from '../../components/DepthSections';
 import { getAntiCheatMeta, getGameTierMeta } from '../../lib/catalog';
 import { getGames } from '../../lib/data';
+import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, buildItemListJsonLd, collectJsonLd } from '../../lib/seo';
 
 export default function GamesIndex({ games }) {
+  const depthSections = getStaticPageDepth('games');
+
   return (
     <>
       <Seo
@@ -32,6 +37,26 @@ export default function GamesIndex({ games }) {
         </p>
       </section>
 
+      <DepthSections sections={depthSections} />
+
+      <section className="content-block">
+        <h2>How to use this database</h2>
+        <div className="content-grid">
+          <article className="card">
+            <h3>Check daily titles first</h3>
+            <p>Linux gaming viability is decided by the games you actually play every week, not your full backlog.</p>
+          </article>
+          <article className="card">
+            <h3>Anti-cheat can decide</h3>
+            <p>A strong Proton result still needs anti-cheat support for multiplayer. Broken or denied support means keep Windows, console, or cloud gaming available.</p>
+          </article>
+          <article className="card">
+            <h3>Test before cutover</h3>
+            <p>Launchers, controllers, cloud saves, mods, DLC, overlays, and GPU drivers can all change the real result on your PC.</p>
+          </article>
+        </div>
+      </section>
+
       <section className="content-grid">
         {games.map(game => {
           const tier = getGameTierMeta(game.protonTier);
@@ -39,7 +64,8 @@ export default function GamesIndex({ games }) {
           return (
             <article key={game.slug} className="card">
               <div className="card__header">
-                <h2>
+                <h2 className="card__title-icon">
+                  <Icon name="games" />
                   <Link href={`/games/${game.slug}`}>{game.title}</Link>
                 </h2>
                 <div className="badge-stack">
@@ -76,4 +102,3 @@ export async function getStaticProps() {
     },
   };
 }
-

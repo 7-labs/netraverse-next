@@ -1,14 +1,23 @@
 import Link from 'next/link';
+import DecisionSnapshot from '../../components/DecisionSnapshot';
 import Layout from '../../components/Layout';
 import ReferenceList from '../../components/ReferenceList';
 import Seo from '../../components/Seo';
+import DepthSections from '../../components/DepthSections';
+import IntentPanel from '../../components/IntentPanel';
 import {
+  buildGameDecisionCards,
   buildGameFaq,
+  buildGameTestChecklist,
   getAntiCheatMeta,
   getDesktopLinuxMeta,
   getGameTierMeta,
+  summarizeGame,
 } from '../../lib/catalog';
-import { getGame, getGames } from '../../lib/data';
+import { getGame, getGames, getRelatedGames } from '../../lib/data';
+import { getGameDepthSections } from '../../lib/contentDepth';
+import { getGameEditorialSections } from '../../lib/editorialInsights';
+import { getGameIntentPanel } from '../../lib/pageIntent';
 import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
@@ -17,7 +26,7 @@ import {
 } from '../../lib/seo';
 import { formatUpdatedDate } from '../../lib/site';
 
-export default function GamePage({ game }) {
+export default function GamePage({ game, relatedGames }) {
   const tier = getGameTierMeta(game.protonTier);
   const antiCheat = getAntiCheatMeta(game.antiCheatStatus);
   const desktop = getDesktopLinuxMeta(game.desktopLinuxStatus);
@@ -27,18 +36,25 @@ export default function GamePage({ game }) {
     { href: `/games/${game.slug}`, label: game.title },
   ];
   const faq = buildGameFaq(game);
+  const decisionCards = buildGameDecisionCards(game);
+  const testChecklist = buildGameTestChecklist(game);
+  const depthSections = [
+    ...getGameEditorialSections(game),
+    ...getGameDepthSections(game),
+  ];
+  const intentPanel = getGameIntentPanel(game, testChecklist);
 
   return (
     <>
       <Seo
         title={`${game.title} on Linux | Netraverse`}
-        description={game.bestMethod}
+        description={summarizeGame(game)}
         canonical={`/games/${game.slug}`}
         jsonLd={collectJsonLd(
           buildBreadcrumbJsonLd(breadcrumbs),
           buildVideoGameJsonLd({
             title: game.title,
-            description: game.bestMethod,
+            description: summarizeGame(game),
             path: `/games/${game.slug}`,
           }),
           buildFaqJsonLd(faq),
@@ -67,6 +83,34 @@ export default function GamePage({ game }) {
           </div>
         </header>
 
+        <IntentPanel {...intentPanel} />
+
+        <DecisionSnapshot
+          title={`${game.title} decision snapshot`}
+          items={[
+            {
+              label: 'Desktop Linux',
+              value: desktop.label,
+              note: game.bestMethod,
+            },
+            {
+              label: 'Proton signal',
+              value: tier.label,
+              note: 'Read this together with anti-cheat and launcher behavior, not in isolation.',
+            },
+            {
+              label: 'Anti-cheat',
+              value: antiCheat.label,
+              note: game.warningNote || 'Still test online services before removing Windows.',
+            },
+            {
+              label: 'First test',
+              value: testChecklist[0],
+              note: 'Run this before trusting the result on your main account or main PC.',
+            },
+          ]}
+        />
+
         <section className="content-block">
           <h2>Linux Readiness</h2>
           <div className="table-wrap">
@@ -94,6 +138,50 @@ export default function GamePage({ game }) {
           {game.notes ? <p>{game.notes}</p> : null}
         </section>
 
+        <DepthSections sections={depthSections} />
+
+        <section className="content-block">
+          <h2>Migration decision for {game.title}</h2>
+          <div className="content-grid">
+            {decisionCards.map(card => (
+              <article key={card.title} className="card">
+                <h3>{card.title}</h3>
+                <p><strong>{card.value}</strong></p>
+                <p>{card.body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-block">
+          <h2>Pre-switch test checklist</h2>
+          <p>
+            Game pages are decision aids, not a substitute for testing on your own
+            account and hardware. Before you make Linux your only gaming OS, run
+            this checklist for {game.title}.
+          </p>
+          <ul className="break-list">
+            {testChecklist.map(item => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="content-block">
+          <h2>When to keep Windows</h2>
+          <p>
+            Keep a Windows dual-boot, separate Windows PC, console, or cloud
+            gaming path if {game.title} is one of your daily titles and this page
+            shows broken anti-cheat, publisher denial, borked Proton status, or
+            unverified multiplayer behavior.
+          </p>
+          <p>
+            If the page shows a working path, still test updates over time. Proton,
+            launchers, kernel versions, GPU drivers, and anti-cheat decisions can
+            change after a game update.
+          </p>
+        </section>
+
         <section className="content-block">
           <h2>FAQ</h2>
           <div className="faq-list">
@@ -105,6 +193,26 @@ export default function GamePage({ game }) {
             ))}
           </div>
         </section>
+
+        {relatedGames?.length ? (
+          <section className="content-block">
+            <h2>Related games to check next</h2>
+            <p>
+              These titles share similar Proton, anti-cheat, Steam Deck, or desktop Linux signals.
+              Check them before making a whole-library migration decision.
+            </p>
+            <div className="content-grid">
+              {relatedGames.map(item => (
+                <article key={item.slug} className="card">
+                  <h3>
+                    <Link href={`/games/${item.slug}`}>{item.title}</Link>
+                  </h3>
+                  <p>{item.bestMethod}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         <section className="content-block">
           <h2>Next Steps</h2>
@@ -150,10 +258,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const game = getGame(params.slug);
   return {
     props: {
-      game: getGame(params.slug),
+      game,
+      relatedGames: getRelatedGames(game),
     },
   };
 }
-

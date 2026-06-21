@@ -1,12 +1,30 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
+import Icon from '../../components/Icon';
+import DepthSections from '../../components/DepthSections';
 import { getAppVerdictMeta } from '../../lib/catalog';
 import { getApps } from '../../lib/data';
+import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, buildItemListJsonLd, collectJsonLd } from '../../lib/seo';
+
+const CATEGORY_ICONS = {
+  browser: 'monitor',
+  communication: 'mail',
+  creative: 'sparkles',
+  development: 'terminal',
+  engineering: 'tools',
+  finance: 'file',
+  gaming: 'games',
+  media: 'monitor',
+  productivity: 'file',
+  security: 'shield',
+  utilities: 'tools',
+};
 
 export default function AppsIndex({ groupedApps }) {
   const allApps = groupedApps.flatMap(group => group.items);
+  const depthSections = getStaticPageDepth('apps');
   return (
     <>
       <Seo
@@ -33,6 +51,26 @@ export default function AppsIndex({ groupedApps }) {
         </p>
       </section>
 
+      <DepthSections sections={depthSections} />
+
+      <section className="content-block">
+        <h2>How to use this database</h2>
+        <div className="content-grid">
+          <article className="card">
+            <h3>Start with blockers</h3>
+            <p>Open the apps that would force you back to Windows first: office suites, Adobe tools, accounting, CAD, VPN/security, and device utilities.</p>
+          </article>
+          <article className="card">
+            <h3>Read the method</h3>
+            <p>Native and web paths are usually safest. Wine, VM, and replacement paths need real-file testing before you commit.</p>
+          </article>
+          <article className="card">
+            <h3>Check the full setup</h3>
+            <p>An app that works alone can still be part of a risky migration if your games, peripherals, or one business workflow are blocked.</p>
+          </article>
+        </div>
+      </section>
+
       {groupedApps.map(group => (
         <section key={group.category} className="content-block">
           <h2>{group.label}</h2>
@@ -42,7 +80,8 @@ export default function AppsIndex({ groupedApps }) {
               return (
                 <article key={app.slug} className="card">
                   <div className="card__header">
-                    <h3>
+                    <h3 className="card__title-icon">
+                      <Icon name={CATEGORY_ICONS[group.category] || 'apps'} />
                       <Link href={`/apps/${app.slug}`}>{app.title}</Link>
                     </h3>
                     <span className={`badge ${meta.className}`}>{meta.label}</span>

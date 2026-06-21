@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import Icon from './Icon';
 import { computeCheckerResult, getAppVerdictMeta, getGameTierMeta } from '../lib/catalog';
 
 const REQUEST_FORM_ENDPOINT = process.env.NEXT_PUBLIC_REQUEST_FORM_ENDPOINT || '';
@@ -189,9 +190,10 @@ export default function CompatibilityEngine({
               <p>No match for “{input.trim()}”.</p>
               <div className="request-capture__actions">
                 <button type="submit" disabled={requestStatus === 'sending'}>
+                  <Icon name="sparkles" />
                   {requestStatus === 'sending' ? 'Sending...' : 'Request it'}
                 </button>
-                <a href={requestMailto(input.trim())}>Email</a>
+                <a href={requestMailto(input.trim())}><Icon name="mail" />Email</a>
               </div>
               {requestStatus === 'sent' ? (
                 <p className="request-status">Request received.</p>
@@ -219,14 +221,15 @@ export default function CompatibilityEngine({
 
       <div className="chip-row">
         {selected.map(item => (
-          <button key={item.slug} type="button" className="chip" onClick={() => removeItem(item.slug)}>
-            {item.title} ✕
+          <button key={item.slug} type="button" className="chip" onClick={() => removeItem(item.slug)} aria-label={`Remove ${item.title}`}>
+            {item.title} <span aria-hidden="true">✕</span>
           </button>
         ))}
       </div>
 
       <div className="action-row">
         <button type="button" onClick={() => evaluate()}>
+          <Icon name="gauge" />
           Check Compatibility
         </button>
       </div>
@@ -235,7 +238,7 @@ export default function CompatibilityEngine({
         <section className="results-panel">
           <div className="result-summary">
             <div>
-              <p className="eyebrow">Migration report</p>
+              <p className="eyebrow"><Icon name="route" />Migration report</p>
               <h2>{result.overall}</h2>
               <p>
                 Readiness {result.readiness}/100 · Best distro:{' '}
@@ -245,12 +248,15 @@ export default function CompatibilityEngine({
             </div>
             <div className="action-row action-row--report">
               <button type="button" onClick={copyReport}>
-                {copied === 'report' ? 'Copied ✓' : 'Copy report'}
+                <Icon name={copied === 'report' ? 'check' : 'copy'} />
+                {copied === 'report' ? 'Copied' : 'Copy report'}
               </button>
               <button type="button" className="button--ghost" onClick={shareResult}>
-                {copied === 'link' ? 'Link copied ✓' : 'Share result'}
+                <Icon name={copied === 'link' ? 'check' : 'share'} />
+                {copied === 'link' ? 'Link copied' : 'Share result'}
               </button>
               <Link className="button--ghost" href="/content/switch-from-windows-10-to-linux">
+                <Icon name="guides" />
                 Open full checklist
               </Link>
             </div>
@@ -258,7 +264,7 @@ export default function CompatibilityEngine({
 
           {result.blockers.length ? (
             <div className="report-block">
-              <h3>Biggest blockers</h3>
+              <h3><Icon name="alert" />Biggest blockers</h3>
               <ol className="blocker-list">
                 {result.blockers.map(blocker => (
                   <li key={blocker.slug} className={`blocker blocker--${blocker.severity}`}>
@@ -272,11 +278,11 @@ export default function CompatibilityEngine({
               </ol>
             </div>
           ) : (
-            <p className="report-clear">No blockers found — everything you listed has a workable Linux path.</p>
+            <p className="report-clear"><Icon name="check" />No blockers found — everything you listed has a workable Linux path.</p>
           )}
 
           <div className="report-block">
-            <h3>Recommended setup</h3>
+            <h3><Icon name="tools" />Recommended setup</h3>
             <ul className="setup-list">
               {result.setup.map(step => (
                 <li key={step}>{step}</li>
@@ -285,7 +291,7 @@ export default function CompatibilityEngine({
           </div>
 
           <div className="report-block">
-            <h3>Per-item verdicts</h3>
+            <h3><Icon name="apps" />Per-item verdicts</h3>
             <div className="content-grid">
               {result.items.map(item => {
                 const meta =
@@ -295,7 +301,8 @@ export default function CompatibilityEngine({
                 return (
                   <article key={item.slug} className="card">
                     <div className="card__header">
-                      <h4>
+                      <h4 className="card__title-icon">
+                        <Icon name={item.kind === 'game' ? 'games' : 'monitor'} />
                         <Link href={item.href}>{item.title}</Link>
                       </h4>
                       <span className={`badge ${meta.className}`}>{meta.label}</span>

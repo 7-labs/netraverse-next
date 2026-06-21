@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
+import DepthSections from '../../components/DepthSections';
+import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, collectJsonLd } from '../../lib/seo';
 
 function getDistroRecommendation(age, experience, usage) {
@@ -59,6 +61,7 @@ export default function DistroFinder() {
   const [experience, setExperience] = useState('beginner');
   const [usage, setUsage] = useState('general');
   const [result, setResult] = useState(null);
+  const depthSections = getStaticPageDepth('distro-finder');
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -149,6 +152,46 @@ export default function DistroFinder() {
             </p>
           </div>
         ) : null}
+      </section>
+
+      <DepthSections sections={depthSections} />
+
+      <section className="content-block">
+        <h2>How to choose without overthinking it</h2>
+        <p>
+          For most former Windows users, the safest first distro is not the most
+          exotic one. Start with a mainstream desktop that has good documentation,
+          predictable updates, and a large support community, then change later if
+          you outgrow it.
+        </p>
+        <div className="content-grid">
+          <article className="card">
+            <h3>Beginner</h3>
+            <p>Choose Linux Mint or Zorin OS when familiarity matters more than package freshness.</p>
+          </article>
+          <article className="card">
+            <h3>Older hardware</h3>
+            <p>Try Xubuntu or Linux Lite when RAM, storage, graphics, or battery headroom is tight.</p>
+          </article>
+          <article className="card">
+            <h3>Gaming or development</h3>
+            <p>Consider Fedora, Bazzite, Nobara, or Pop!_OS when newer kernels, drivers, and tools matter.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="content-block">
+        <h2>Test plan before installing</h2>
+        <ol>
+          <li>Boot a live USB or spare SSD first; do not overwrite Windows on day one.</li>
+          <li>Check Wi-Fi, Bluetooth, suspend/resume, display scaling, keyboard shortcuts, and external monitors.</li>
+          <li>Run the compatibility checker for your must-have apps and games.</li>
+          <li>Keep a rollback path until you complete a normal week of work or school on Linux.</li>
+        </ol>
+        <p>
+          Then read the <Link href="/content/best-linux-distro-for-old-laptop">old-laptop distro guide</Link>{' '}
+          and the <Link href="/content/switch-from-windows-10-to-linux">Windows 10 to Linux switch guide</Link>.
+        </p>
       </section>
     </>
   );

@@ -1,10 +1,15 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
+import Icon from '../../components/Icon';
+import DepthSections from '../../components/DepthSections';
 import { ALL_TOOLS } from '../../lib/tools';
+import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, buildItemListJsonLd, collectJsonLd } from '../../lib/seo';
 
 export default function ToolsIndex() {
+  const depthSections = getStaticPageDepth('tools');
+
   return (
     <>
       <Seo
@@ -29,13 +34,27 @@ export default function ToolsIndex() {
         </p>
       </section>
 
+      <DepthSections sections={depthSections} />
+
+      <section className="content-block">
+        <h2>Pick the right checker first</h2>
+        <p>
+          Netraverse tools are organized around the real migration blockers:
+          Windows apps, games, anti-cheat, hardware age, and distro fit. Start
+          with the checker closest to your immediate decision, then open the app
+          and game detail pages for anything marked risky.
+        </p>
+      </section>
+
       <section className="content-grid">
         {ALL_TOOLS.map(tool => (
           <article key={tool.href} className="card">
+            <span className="card__icon"><Icon name="tools" /></span>
             <h2>
               <Link href={tool.href}>{tool.h1}</Link>
             </h2>
             <p>{tool.description}</p>
+            <span className="card__cta">Open tool<Icon name="arrowRight" /></span>
           </article>
         ))}
       </section>

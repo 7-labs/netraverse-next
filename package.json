@@ -8,7 +8,12 @@
     "ingest": "node ./scripts/ingest/fetch-flathub.mjs && node ./scripts/ingest/fetch-protondb.mjs && node ./scripts/ingest/fetch-gamingonlinux.mjs && node ./scripts/ingest/fetch-winehq.mjs && node ./scripts/ingest/build-dataset.mjs",
     "qa:lighthouse": "node ./scripts/qa/lighthouse.mjs",
     "validate:launch": "node ./scripts/validate-launch.mjs",
+    "validate:content": "node ./scripts/validate-content-depth.mjs",
+    "validate:content-structure": "node ./scripts/validate-content-structure.mjs",
+    "validate:editorial": "node ./scripts/validate-editorial-insights.mjs",
+    "validate:quality": "node ./scripts/validate-page-quality.mjs",
     "validate:r2": "node ./scripts/validate-r2-data.mjs",
+    "validate:words": "node ./scripts/validate-word-count.mjs",
     "refresh": "bash ./scripts/refresh.sh",
     "start": "next start"
   },

@@ -1,15 +1,25 @@
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import DecisionSnapshot from '../../components/DecisionSnapshot';
 import ReferenceList from '../../components/ReferenceList';
 import Seo from '../../components/Seo';
+import Icon from '../../components/Icon';
+import DepthSections from '../../components/DepthSections';
+import IntentPanel from '../../components/IntentPanel';
 import {
+  buildAppDecisionCards,
   buildAppFaq,
   buildAppMethodRows,
+  buildAppMigrationSteps,
+  buildAppTestChecklist,
   getAppVerdictMeta,
   getMigrationRiskMeta,
   summarizeApp,
 } from '../../lib/catalog';
 import { getApp, getApps, getRelatedApps } from '../../lib/data';
+import { getAppDepthSections } from '../../lib/contentDepth';
+import { getAppEditorialSections } from '../../lib/editorialInsights';
+import { getAppIntentPanel } from '../../lib/pageIntent';
 
 const ACTION_LABEL = {
   native: 'Use the native Linux app',
@@ -35,6 +45,14 @@ export default function AppPage({ app }) {
   const verdict = getAppVerdictMeta(app.verdict);
   const risk = getMigrationRiskMeta(app.migrationRisk);
   const faq = buildAppFaq(app);
+  const decisionCards = buildAppDecisionCards(app);
+  const migrationSteps = buildAppMigrationSteps(app);
+  const testChecklist = buildAppTestChecklist(app);
+  const depthSections = [
+    ...getAppEditorialSections(app),
+    ...getAppDepthSections(app),
+  ];
+  const intentPanel = getAppIntentPanel(app, testChecklist);
 
   return (
     <>
@@ -69,7 +87,8 @@ export default function AppPage({ app }) {
             </div>
           </div>
           <p className="decision-action">
-            <strong>Recommended:</strong> {ACTION_LABEL[app.recommendedAction] || app.bestMethod}
+            <Icon name="sparkles" />
+            <span><strong>Recommended:</strong> {ACTION_LABEL[app.recommendedAction] || app.bestMethod}</span>
           </p>
           <div className="meta-row">
             <span>Difficulty {app.difficulty}/10</span>
@@ -78,6 +97,34 @@ export default function AppPage({ app }) {
             <span>Updated: {formatUpdatedDate(app.lastUpdated)}</span>
           </div>
         </header>
+
+        <IntentPanel {...intentPanel} />
+
+        <DecisionSnapshot
+          title={`${app.title} decision snapshot`}
+          items={[
+            {
+              label: 'Linux path',
+              value: verdict.label,
+              note: verdict.explanation,
+            },
+            {
+              label: 'Migration risk',
+              value: risk.label,
+              note: `${app.title} has difficulty ${app.difficulty}/10 and ${app.confidence} confidence in the current dataset.`,
+            },
+            {
+              label: 'Best method',
+              value: ACTION_LABEL[app.recommendedAction] || app.recommendedAction || app.verdict,
+              note: app.bestMethod,
+            },
+            {
+              label: 'First test',
+              value: testChecklist[0],
+              note: 'Do this before treating the app as safe for a full Linux cutover.',
+            },
+          ]}
+        />
 
         <section className="content-block">
           <h2>Does {app.title} work on Linux?</h2>
@@ -114,9 +161,47 @@ export default function AppPage({ app }) {
           </div>
         </section>
 
+        <DepthSections sections={depthSections} />
+
+        <section className="content-block">
+          <h2>Migration decision for {app.title}</h2>
+          <div className="content-grid">
+            {decisionCards.map(card => (
+              <article key={card.title} className="card">
+                <h3>{card.title}</h3>
+                <p><strong>{card.value}</strong></p>
+                <p>{card.body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-block">
+          <h2>Migration plan</h2>
+          <ol>
+            {migrationSteps.map(step => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="content-block">
+          <h2>Pre-migration test checklist</h2>
+          <ul className="break-list">
+            {testChecklist.map(item => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
         {app.alternatives?.length ? (
           <section className="content-block">
             <h2>Alternatives</h2>
+            <p>
+              Treat alternatives as migration candidates, not just names on a list.
+              Open one real file or complete one real task before you decide that
+              {` ${app.title} `}is safely replaceable.
+            </p>
             <ul className="link-list">
               {app.alternatives.map(item => (
                 <li key={item.name}>
@@ -157,7 +242,8 @@ export default function AppPage({ app }) {
           <p>
             {app.title} is one piece of your migration. Add it alongside your
             other apps and games to see whether this whole PC can move to Linux
-            before Windows 10 security updates end.
+            before the Windows 10 ESU bridge runs out or another replacement
+            deadline forces the decision.
           </p>
           <ul className="link-list">
             <li>

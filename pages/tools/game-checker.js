@@ -2,8 +2,10 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
+import DepthSections from '../../components/DepthSections';
 import { getAntiCheatMeta, getGameTierMeta } from '../../lib/catalog';
 import { getGames } from '../../lib/data';
+import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, collectJsonLd } from '../../lib/seo';
 
 export default function GameChecker({ games }) {
@@ -23,6 +25,7 @@ export default function GameChecker({ games }) {
 
   const tier = selected ? getGameTierMeta(selected.protonTier) : null;
   const antiCheat = selected ? getAntiCheatMeta(selected.antiCheatStatus) : null;
+  const depthSections = getStaticPageDepth('game-checker');
 
   return (
     <>
@@ -86,6 +89,39 @@ export default function GameChecker({ games }) {
             </p>
           </div>
         ) : null}
+      </section>
+
+      <DepthSections sections={depthSections} />
+
+      <section className="content-block">
+        <h2>How to read a game result</h2>
+        <div className="content-grid">
+          <article className="card">
+            <h3>Proton tier</h3>
+            <p>Good Proton results are encouraging, but they do not guarantee launcher, mod, save-sync, or multiplayer behavior on your hardware.</p>
+          </article>
+          <article className="card">
+            <h3>Anti-cheat</h3>
+            <p>Anti-cheat can override everything else. A game can launch and still be unsafe or blocked for online play.</p>
+          </article>
+          <article className="card">
+            <h3>Decision</h3>
+            <p>If a must-play title is broken, keep Windows, console, or cloud gaming available until the publisher changes support.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="content-block">
+        <h2>Before you make Linux your only gaming OS</h2>
+        <ol>
+          <li>Test your top five games, not only one easy single-player title.</li>
+          <li>Check multiplayer, controller input, cloud saves, DLC, mods, and launchers.</li>
+          <li>Keep Windows for any daily title with broken anti-cheat or publisher-blocked support.</li>
+        </ol>
+        <p>
+          For a broader view, open the <Link href="/content/gaming-on-linux">Linux gaming guide</Link>{' '}
+          or browse the full <Link href="/games">game compatibility database</Link>.
+        </p>
       </section>
     </>
   );

@@ -3,8 +3,13 @@ import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
 import ReferenceList from '../../components/ReferenceList';
 import CompatibilityEngine from '../../components/CompatibilityEngine';
+import DepthSections from '../../components/DepthSections';
+import IntentPanel from '../../components/IntentPanel';
 import { getGuideBySlug, GUIDE_PAGES } from '../../lib/guides';
+import { getGuideDepthBlock } from '../../lib/guide-depth';
 import { getDatasetOptions } from '../../lib/data';
+import { getGuideDepthSections } from '../../lib/contentDepth';
+import { getGuideIntentPanel } from '../../lib/pageIntent';
 import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
@@ -22,11 +27,13 @@ const GUIDE_TOOLS = {
   'old-pc-cant-run-windows-11': { kind: null, defaultUsage: 'general' },
 };
 
-export default function GuidePage({ guide, options }) {
+export default function GuidePage({ guide, options, depthBlock }) {
   if (!guide) {
     return null;
   }
   const tool = GUIDE_TOOLS[guide.slug];
+  const depthSections = getGuideDepthSections(guide);
+  const intentPanel = getGuideIntentPanel(guide);
 
   const breadcrumbs = [
     { href: '/', label: 'Home' },
@@ -71,6 +78,24 @@ export default function GuidePage({ guide, options }) {
           <p className="lede">{guide.intro}</p>
         </header>
 
+        <IntentPanel {...intentPanel} />
+
+        {guide.quickAnswer || guide.summaryBullets?.length ? (
+          <section className="content-block">
+            <h2>Quick answer</h2>
+            {guide.quickAnswer ? <p>{guide.quickAnswer}</p> : null}
+            {guide.summaryBullets?.length ? (
+              <ul className="break-list">
+                {guide.summaryBullets.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : null}
+          </section>
+        ) : null}
+
+        <DepthSections sections={depthSections} />
+
         {tool && options ? (
           <section className="content-block">
             <h2>Check your own setup</h2>
@@ -91,6 +116,29 @@ export default function GuidePage({ guide, options }) {
             ))}
           </section>
         ))}
+
+        {depthBlock ? (
+          <>
+            <section className="content-block">
+              <h2>Decision framework</h2>
+              {depthBlock.decision.map(paragraph => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+            <section className="content-block">
+              <h2>Practical plan</h2>
+              {depthBlock.plan.map(paragraph => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+            <section className="content-block">
+              <h2>Common mistakes to avoid</h2>
+              {depthBlock.mistakes.map(paragraph => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+          </>
+        ) : null}
 
         <section className="content-block">
           <h2>FAQ</h2>
@@ -149,6 +197,6 @@ export async function getStaticProps({ params }) {
     options = tool.kind ? all.filter(item => item.kind === tool.kind) : all;
   }
   return {
-    props: { guide, options },
+    props: { guide, options, depthBlock: guide ? getGuideDepthBlock(guide.slug) : null },
   };
 }

@@ -10,7 +10,14 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="data:," />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#1d4ed8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        />
         {GOOGLE_SITE_VERIFICATION ? (
           <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
         ) : null}

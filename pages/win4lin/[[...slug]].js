@@ -2,7 +2,9 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import ReferenceList from '../../components/ReferenceList';
 import Seo from '../../components/Seo';
+import DepthSections from '../../components/DepthSections';
 import { getWin4LinPage, WIN4LIN_PAGES } from '../../lib/history';
+import { getHistoryDepthSections } from '../../lib/contentDepth';
 import {
   buildArticleJsonLd,
   buildBreadcrumbJsonLd,
@@ -34,6 +36,7 @@ function buildBreadcrumbs(page) {
 
 export default function Win4LinPage({ page }) {
   const breadcrumbs = buildBreadcrumbs(page);
+  const depthSections = getHistoryDepthSections(page);
   const jsonLd = collectJsonLd(
     buildBreadcrumbJsonLd(breadcrumbs),
     buildArticleJsonLd({
@@ -70,6 +73,42 @@ export default function Win4LinPage({ page }) {
             ))}
           </section>
         ))}
+
+        <DepthSections sections={depthSections} />
+
+        <section className="content-block">
+          <h2>How to use this historical page today</h2>
+          <p>
+            This page is preserved for old Netraverse and Win4Lin search intent,
+            but the practical 2026 question is different: can your current Windows
+            apps and games move to Linux through native clients, web apps, Wine,
+            Proton, or a Windows VM?
+          </p>
+          <div className="content-grid">
+            <article className="card">
+              <h3>Historical intent</h3>
+              <p>Old visitors were usually looking for Windows compatibility on a non-Windows host.</p>
+            </article>
+            <article className="card">
+              <h3>Modern equivalent</h3>
+              <p>Today that means app compatibility, game compatibility, anti-cheat status, and fallback planning.</p>
+            </article>
+            <article className="card">
+              <h3>Next action</h3>
+              <p>Use the compatibility checker before making a Windows 10 to Linux migration decision.</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="content-block">
+          <h2>Current compatibility paths</h2>
+          <ul className="link-list">
+            <li><Link href="/">Run the Windows-to-Linux compatibility checker</Link></li>
+            <li><Link href="/apps">Browse current app compatibility pages</Link></li>
+            <li><Link href="/games">Browse current game compatibility pages</Link></li>
+            <li><Link href="/content/run-windows-apps-on-linux">Read how Windows apps run on Linux now</Link></li>
+          </ul>
+        </section>
 
         {page.relatedLinks?.length ? (
           <section className="content-block">
