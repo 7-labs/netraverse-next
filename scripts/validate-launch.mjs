@@ -54,6 +54,9 @@ async function main() {
   if (!documentSource.includes('NEXT_PUBLIC_UMAMI_SITE_ID')) {
     errors.push('pages/_document.js does not read NEXT_PUBLIC_UMAMI_SITE_ID');
   }
+  if (documentSource.includes('TODO_OWNER_FILL')) {
+    errors.push('pages/_document.js still contains a TODO_OWNER_FILL placeholder that would ship to production');
+  }
 
   if (!(await exists('public/sitemap.xml'))) {
     errors.push('public/sitemap.xml is missing; run npm run build or node scripts/generate-sitemap.mjs');

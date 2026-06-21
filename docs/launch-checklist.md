@@ -30,6 +30,10 @@ Recommended variables:
   endpoint for no-match requests.
 - `NEXT_PUBLIC_REQUEST_EMAIL`: fallback request inbox. Defaults to
   `requests@netraverse.com`.
+- `NEXT_PUBLIC_GSC_VERIFICATION`: Google Search Console `content` token (meta-tag
+  method). Omit if verifying via DNS or an HTML file instead.
+- `NEXT_PUBLIC_BING_VERIFICATION`: Bing Webmaster `msvalidate.01` token. Omit if
+  verifying by another method.
 
 ## CI Gate
 
