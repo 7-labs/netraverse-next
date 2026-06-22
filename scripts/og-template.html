@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; }
+      body {
+        font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: #fff;
+        background:
+          radial-gradient(120% 120% at 100% 0%, rgba(255,255,255,0.18), transparent 55%),
+          linear-gradient(135deg, #3b74e0 0%, #1d4ed8 55%, #18327d 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .orb {
+        position: absolute; border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.22), transparent 70%);
+      }
+      .orb-a { width: 520px; height: 520px; top: -180px; right: -120px; }
+      .orb-b { width: 360px; height: 360px; bottom: -160px; left: -80px; }
+      .wrap { position: relative; padding: 72px 80px; height: 100%; display: flex; flex-direction: column; }
+      .brand { display: flex; align-items: center; gap: 20px; }
+      .mark {
+        width: 76px; height: 76px; border-radius: 20px;
+        background: rgba(255,255,255,0.16);
+        border: 1px solid rgba(255,255,255,0.35);
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+      }
+      .mark svg { width: 44px; height: 44px; }
+      .brand-name { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; }
+      .eyebrow {
+        margin-top: auto;
+        display: inline-flex; align-self: flex-start; align-items: center;
+        gap: 10px; padding: 9px 18px; border-radius: 999px;
+        background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.3);
+        font-size: 21px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      }
+      h1 {
+        margin: 22px 0 0; font-size: 76px; line-height: 1.04;
+        font-weight: 800; letter-spacing: -0.025em; max-width: 1000px;
+      }
+      p.sub {
+        margin: 26px 0 0; font-size: 31px; line-height: 1.4;
+        color: rgba(255,255,255,0.92); max-width: 940px; font-weight: 500;
+      }
+      .foot {
+        margin-top: auto; display: flex; align-items: center; justify-content: space-between;
+        font-size: 24px; font-weight: 600; color: rgba(255,255,255,0.9);
+      }
+      .foot .url { font-weight: 800; }
+    </style>
+  </head>
+  <body>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="wrap">
+      <div class="brand">
+        <span class="mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3 4 7l4 4" /><path d="M4 7h16" /><path d="m16 21 4-4-4-4" /><path d="M20 17H4" />
+          </svg>
+        </span>
+        <span class="brand-name">Netraverse</span>
+      </div>
+
+      <span class="eyebrow">Windows&nbsp;10 → Linux</span>
+      <h1>Can your Windows&nbsp;10 PC switch to Linux?</h1>
+      <p class="sub">Check your apps and games — see what works, what breaks, and what to use instead.</p>
+
+      <div class="foot">
+        <span class="url">netraverse.com</span>
+        <span>Windows&nbsp;10 support ended Oct&nbsp;2025</span>
+      </div>
+    </div>
+  </body>
+</html>

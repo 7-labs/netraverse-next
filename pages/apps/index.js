@@ -1,12 +1,24 @@
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import Seo from '../../components/Seo';
 import Icon from '../../components/Icon';
+import CatalogFilter from '../../components/CatalogFilter';
 import DepthSections from '../../components/DepthSections';
-import { getAppVerdictMeta } from '../../lib/catalog';
+import { APP_VERDICT_META, getAppVerdictMeta } from '../../lib/catalog';
 import { getApps } from '../../lib/data';
 import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, buildItemListJsonLd, collectJsonLd } from '../../lib/seo';
+
+function toggleInSet(set, value) {
+  const next = new Set(set);
+  if (next.has(value)) {
+    next.delete(value);
+  } else {
+    next.add(value);
+  }
+  return next;
+}
 
 const CATEGORY_ICONS = {
   browser: 'monitor',
@@ -25,6 +37,46 @@ const CATEGORY_ICONS = {
 export default function AppsIndex({ groupedApps }) {
   const allApps = groupedApps.flatMap(group => group.items);
   const depthSections = getStaticPageDepth('apps');
+  const [search, setSearch] = useState('');
+  const [verdicts, setVerdicts] = useState(() => new Set());
+  const [categories, setCategories] = useState(() => new Set());
+
+  const verdictOptions = useMemo(() => {
+    const present = Array.from(new Set(allApps.map(app => app.verdict).filter(Boolean)));
+    return present
+      .sort((a, b) => (APP_VERDICT_META[a]?.score ?? 99) - (APP_VERDICT_META[b]?.score ?? 99))
+      .map(value => ({ value, label: APP_VERDICT_META[value]?.label || value }));
+  }, [allApps]);
+
+  const categoryOptions = useMemo(
+    () => groupedApps.map(group => ({ value: group.category, label: group.label })),
+    [groupedApps],
+  );
+
+  const filteredGroups = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    return groupedApps
+      .filter(group => !categories.size || categories.has(group.category))
+      .map(group => ({
+        ...group,
+        items: group.items.filter(app => {
+          const haystack = `${app.title} ${app.slug}`.toLowerCase();
+          if (query && !haystack.includes(query)) return false;
+          if (verdicts.size && !verdicts.has(app.verdict)) return false;
+          return true;
+        }),
+      }))
+      .filter(group => group.items.length > 0);
+  }, [groupedApps, search, verdicts, categories]);
+
+  const shownCount = filteredGroups.reduce((total, group) => total + group.items.length, 0);
+
+  function clearFilters() {
+    setSearch('');
+    setVerdicts(new Set());
+    setCategories(new Set());
+  }
+
   return (
     <>
       <Seo
@@ -51,28 +103,59 @@ export default function AppsIndex({ groupedApps }) {
         </p>
       </section>
 
-      {groupedApps.map(group => (
-        <section key={group.category} className="content-block">
-          <h2>{group.label}</h2>
-          <div className="content-grid card-grid">
-            {group.items.map(app => {
-              const meta = getAppVerdictMeta(app.verdict);
-              return (
-                <article key={app.slug} className="card">
-                  <div className="card__header">
-                    <h3 className="card__title-icon">
-                      <Icon name={CATEGORY_ICONS[group.category] || 'apps'} />
-                      <Link href={`/apps/${app.slug}`}>{app.title}</Link>
-                    </h3>
-                    <span className={`badge ${meta.className}`}>{meta.label}</span>
-                  </div>
-                  <p>{app.bestMethod}</p>
-                </article>
-              );
-            })}
-          </div>
+      <CatalogFilter
+        search={search}
+        onSearch={setSearch}
+        placeholder="Search apps — e.g. Photoshop, Office, QuickBooks"
+        groups={[
+          {
+            key: 'verdict',
+            label: 'Linux path',
+            options: verdictOptions,
+            active: verdicts,
+            onToggle: value => setVerdicts(current => toggleInSet(current, value)),
+          },
+          {
+            key: 'category',
+            label: 'Category',
+            options: categoryOptions,
+            active: categories,
+            onToggle: value => setCategories(current => toggleInSet(current, value)),
+          },
+        ]}
+        count={shownCount}
+        total={allApps.length}
+        onClear={clearFilters}
+      />
+
+      {filteredGroups.length ? (
+        filteredGroups.map(group => (
+          <section key={group.category} className="content-block">
+            <h2>{group.label}</h2>
+            <div className="content-grid card-grid">
+              {group.items.map(app => {
+                const meta = getAppVerdictMeta(app.verdict);
+                return (
+                  <article key={app.slug} className="card">
+                    <div className="card__header">
+                      <h3 className="card__title-icon">
+                        <Icon name={CATEGORY_ICONS[group.category] || 'apps'} />
+                        <Link href={`/apps/${app.slug}`}>{app.title}</Link>
+                      </h3>
+                      <span className={`badge ${meta.className}`}>{meta.label}</span>
+                    </div>
+                    <p>{app.bestMethod}</p>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ))
+      ) : (
+        <section className="content-block catalog-empty">
+          <p>No apps match those filters. <button type="button" className="link-button" onClick={clearFilters}>Clear filters</button> to see all {allApps.length}.</p>
         </section>
-      ))}
+      )}
 
       <section className="content-block">
         <h2>How to use this database</h2>

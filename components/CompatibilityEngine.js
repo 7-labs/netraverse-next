@@ -21,6 +21,9 @@ export default function CompatibilityEngine({
   const [result, setResult] = useState(null);
   const [copied, setCopied] = useState('');
   const [requestStatus, setRequestStatus] = useState('');
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const [reportEmail, setReportEmail] = useState('');
+  const [reportStatus, setReportStatus] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -58,6 +61,24 @@ export default function CompatibilityEngine({
 
   function removeItem(slug) {
     setSelected(current => current.filter(item => item.slug !== slug));
+  }
+
+  // Keyboard support for the autocomplete (WAI-ARIA combobox pattern).
+  function onSearchKeyDown(event) {
+    if (!suggestions.length) return;
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      setActiveIndex(index => (index + 1) % suggestions.length);
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      setActiveIndex(index => (index <= 0 ? suggestions.length - 1 : index - 1));
+    } else if (event.key === 'Enter' && activeIndex >= 0 && activeIndex < suggestions.length) {
+      event.preventDefault();
+      addItem(suggestions[activeIndex]);
+      setActiveIndex(-1);
+    } else if (event.key === 'Escape') {
+      setActiveIndex(-1);
+    }
   }
 
   function requestMailto(query) {
@@ -111,7 +132,44 @@ export default function CompatibilityEngine({
     }
   }
 
+  async function submitReportEmail(event) {
+    event.preventDefault();
+    const email = reportEmail.trim();
+    if (!email || !result) return;
+    const reportText = buildReportText(result);
+
+    if (!REQUEST_FORM_ENDPOINT) {
+      const subject = encodeURIComponent('Your Netraverse Windows → Linux migration report');
+      window.location.href = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(reportText)}`;
+      return;
+    }
+
+    setReportStatus('sending');
+    try {
+      const response = await fetch(REQUEST_FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'report',
+          email,
+          overall: result.overall,
+          readiness: result.readiness,
+          items: result.items.map(item => item.slug),
+          report: reportText,
+          funnel: basePath,
+          page: window.location.pathname,
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+      if (!response.ok) throw new Error(`Request failed with ${response.status}`);
+      setReportStatus('sent');
+    } catch {
+      setReportStatus('failed');
+    }
+  }
+
   function evaluate(items = selected, activeUsage = usage) {
+    if (!items.length) return;
     const score = computeCheckerResult(items, activeUsage);
     setResult({ ...score, items });
     const params = new URLSearchParams();
@@ -165,16 +223,34 @@ export default function CompatibilityEngine({
             type="text"
             placeholder={searchPlaceholder}
             value={input}
+            role="combobox"
+            aria-expanded={suggestions.length > 0}
+            aria-controls="catalog-search-listbox"
+            aria-autocomplete="list"
+            aria-activedescendant={
+              activeIndex >= 0 ? `catalog-option-${suggestions[activeIndex]?.slug}` : undefined
+            }
+            autoComplete="off"
+            onKeyDown={onSearchKeyDown}
             onChange={event => {
               setInput(event.target.value);
               setRequestStatus('');
+              setActiveIndex(-1);
             }}
           />
           {suggestions.length ? (
-            <ul className="suggestion-list">
-              {suggestions.map(item => (
-                <li key={item.slug}>
-                  <button type="button" onClick={() => addItem(item)}>
+            <ul className="suggestion-list" id="catalog-search-listbox" role="listbox">
+              {suggestions.map((item, index) => (
+                <li key={item.slug} role="presentation">
+                  <button
+                    type="button"
+                    id={`catalog-option-${item.slug}`}
+                    role="option"
+                    aria-selected={index === activeIndex}
+                    className={index === activeIndex ? 'is-active' : undefined}
+                    onMouseEnter={() => setActiveIndex(index)}
+                    onClick={() => addItem(item)}
+                  >
                     <span>{item.title}</span>
                     <span className="suggestion-meta">{item.kind}</span>
                   </button>
@@ -195,14 +271,14 @@ export default function CompatibilityEngine({
                 </button>
                 <a href={requestMailto(input.trim())}><Icon name="mail" />Email</a>
               </div>
-              {requestStatus === 'sent' ? (
-                <p className="request-status">Request received.</p>
-              ) : null}
-              {requestStatus === 'failed' ? (
-                <p className="request-status request-status--error">
-                  Request failed. Use email instead.
-                </p>
-              ) : null}
+              <p
+                className={`request-status${requestStatus === 'failed' ? ' request-status--error' : ''}`}
+                role="status"
+                aria-live="polite"
+              >
+                {requestStatus === 'sent' ? 'Request received.' : ''}
+                {requestStatus === 'failed' ? 'Request failed. Use email instead.' : ''}
+              </p>
             </form>
           ) : null}
         </div>
@@ -228,10 +304,13 @@ export default function CompatibilityEngine({
       </div>
 
       <div className="action-row">
-        <button type="button" onClick={() => evaluate()}>
+        <button type="button" onClick={() => evaluate()} disabled={!selected.length}>
           <Icon name="gauge" />
           Check Compatibility
         </button>
+        {!selected.length ? (
+          <p className="action-hint">Add at least one app or game above to build your report.</p>
+        ) : null}
       </div>
 
       {result ? (
@@ -260,6 +339,10 @@ export default function CompatibilityEngine({
                 Open full checklist
               </Link>
             </div>
+            <p className="sr-only" role="status" aria-live="polite">
+              {copied === 'report' ? 'Report copied to clipboard.' : ''}
+              {copied === 'link' ? 'Link copied to clipboard.' : ''}
+            </p>
           </div>
 
           {result.blockers.length ? (
@@ -312,6 +395,39 @@ export default function CompatibilityEngine({
                 );
               })}
             </div>
+          </div>
+
+          <div className="report-block report-capture">
+            <h3><Icon name="mail" />Email yourself this report</h3>
+            <p className="report-capture__lede">
+              Keep this migration plan in your inbox
+              {REQUEST_FORM_ENDPOINT ? ' and get a heads-up when a blocker’s status changes' : ''}.
+            </p>
+            <form className="report-capture__form" onSubmit={submitReportEmail}>
+              <input
+                type="email"
+                value={reportEmail}
+                onChange={event => {
+                  setReportEmail(event.target.value);
+                  setReportStatus('');
+                }}
+                placeholder="you@example.com"
+                aria-label="Your email address"
+                required
+              />
+              <button type="submit" disabled={reportStatus === 'sending'}>
+                <Icon name="mail" />
+                {reportStatus === 'sending' ? 'Sending…' : 'Email me the report'}
+              </button>
+            </form>
+            <p
+              className={`request-status${reportStatus === 'failed' ? ' request-status--error' : ''}`}
+              role="status"
+              aria-live="polite"
+            >
+              {reportStatus === 'sent' ? 'Sent — check your inbox.' : ''}
+              {reportStatus === 'failed' ? 'Could not send right now — try “Copy report” above.' : ''}
+            </p>
           </div>
         </section>
       ) : null}
