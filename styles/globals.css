@@ -607,6 +607,18 @@ button[type='submit']:active,
   gap: 18px;
 }
 
+/* Dense database/listing grids: wider cards, capped at 3 columns so titles
+   and status badges have room (no cramped 4-up rows). */
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .content-block {
   padding: 26px;
   margin-bottom: 24px;
@@ -724,8 +736,29 @@ a.card,
 .card__header {
   display: flex;
   justify-content: space-between;
-  gap: 14px;
+  gap: 8px 14px;
   align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Title takes the row; badges wrap to the next line instead of overflowing. */
+.card__header > h2,
+.card__header > h3 {
+  min-width: 0;
+  flex: 1 1 55%;
+}
+
+.card__header > .badge,
+.card__header > .badge-stack {
+  flex: 0 0 auto;
+}
+
+.card__title-icon {
+  min-width: 0;
+}
+
+.card__title-icon a {
+  overflow-wrap: anywhere;
 }
 
 .card h3,

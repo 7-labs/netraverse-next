@@ -54,8 +54,6 @@ export default function Home({ options, datasetStats }) {
 
       <CompatibilityEngine options={options} basePath="/" />
 
-      <DepthSections sections={depthSections} />
-
       <section className="content-block">
         <h2><Icon name="route" />How to read your result</h2>
         <div className="content-grid">
@@ -138,6 +136,8 @@ export default function Home({ options, datasetStats }) {
           </article>
         </div>
       </section>
+
+      <DepthSections sections={depthSections} />
     </>
   );
 }

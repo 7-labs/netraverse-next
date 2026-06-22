@@ -34,19 +34,7 @@ export default function ToolsIndex() {
         </p>
       </section>
 
-      <DepthSections sections={depthSections} />
-
-      <section className="content-block">
-        <h2>Pick the right checker first</h2>
-        <p>
-          Netraverse tools are organized around the real migration blockers:
-          Windows apps, games, anti-cheat, hardware age, and distro fit. Start
-          with the checker closest to your immediate decision, then open the app
-          and game detail pages for anything marked risky.
-        </p>
-      </section>
-
-      <section className="content-grid">
+      <section className="content-grid card-grid">
         {ALL_TOOLS.map(tool => (
           <article key={tool.href} className="card">
             <span className="card__icon"><Icon name="tools" /></span>
@@ -58,6 +46,18 @@ export default function ToolsIndex() {
           </article>
         ))}
       </section>
+
+      <section className="content-block">
+        <h2>Pick the right checker first</h2>
+        <p>
+          Netraverse tools are organized around the real migration blockers:
+          Windows apps, games, anti-cheat, hardware age, and distro fit. Start
+          with the checker closest to your immediate decision, then open the app
+          and game detail pages for anything marked risky.
+        </p>
+      </section>
+
+      <DepthSections sections={depthSections} />
     </>
   );
 }

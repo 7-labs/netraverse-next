@@ -31,7 +31,18 @@ export default function GuidesIndex() {
         </p>
       </section>
 
-      <DepthSections sections={depthSections} />
+      <section className="content-grid card-grid">
+        {GUIDE_PAGES.map(guide => (
+          <article key={guide.slug} className="card">
+            <span className="card__icon"><Icon name="guides" /></span>
+            <h2>
+              <Link href={`/content/${guide.slug}`}>{guide.title}</Link>
+            </h2>
+            <p>{guide.description}</p>
+            <span className="card__cta">Read guide<Icon name="arrowRight" /></span>
+          </article>
+        ))}
+      </section>
 
       <section className="content-block">
         <h2>Read in decision order</h2>
@@ -51,18 +62,7 @@ export default function GuidesIndex() {
         </div>
       </section>
 
-      <section className="content-grid">
-        {GUIDE_PAGES.map(guide => (
-          <article key={guide.slug} className="card">
-            <span className="card__icon"><Icon name="guides" /></span>
-            <h2>
-              <Link href={`/content/${guide.slug}`}>{guide.title}</Link>
-            </h2>
-            <p>{guide.description}</p>
-            <span className="card__cta">Read guide<Icon name="arrowRight" /></span>
-          </article>
-        ))}
-      </section>
+      <DepthSections sections={depthSections} />
     </>
   );
 }

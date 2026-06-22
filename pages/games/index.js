@@ -37,27 +37,7 @@ export default function GamesIndex({ games }) {
         </p>
       </section>
 
-      <DepthSections sections={depthSections} />
-
-      <section className="content-block">
-        <h2>How to use this database</h2>
-        <div className="content-grid">
-          <article className="card">
-            <h3>Check daily titles first</h3>
-            <p>Linux gaming viability is decided by the games you actually play every week, not your full backlog.</p>
-          </article>
-          <article className="card">
-            <h3>Anti-cheat can decide</h3>
-            <p>A strong Proton result still needs anti-cheat support for multiplayer. Broken or denied support means keep Windows, console, or cloud gaming available.</p>
-          </article>
-          <article className="card">
-            <h3>Test before cutover</h3>
-            <p>Launchers, controllers, cloud saves, mods, DLC, overlays, and GPU drivers can all change the real result on your PC.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="content-grid">
+      <section className="content-grid card-grid">
         {games.map(game => {
           const tier = getGameTierMeta(game.protonTier);
           const antiCheat = getAntiCheatMeta(game.antiCheatStatus);
@@ -78,6 +58,26 @@ export default function GamesIndex({ games }) {
           );
         })}
       </section>
+
+      <section className="content-block">
+        <h2>How to use this database</h2>
+        <div className="content-grid">
+          <article className="card">
+            <h3>Check daily titles first</h3>
+            <p>Linux gaming viability is decided by the games you actually play every week, not your full backlog.</p>
+          </article>
+          <article className="card">
+            <h3>Anti-cheat can decide</h3>
+            <p>A strong Proton result still needs anti-cheat support for multiplayer. Broken or denied support means keep Windows, console, or cloud gaming available.</p>
+          </article>
+          <article className="card">
+            <h3>Test before cutover</h3>
+            <p>Launchers, controllers, cloud saves, mods, DLC, overlays, and GPU drivers can all change the real result on your PC.</p>
+          </article>
+        </div>
+      </section>
+
+      <DepthSections sections={depthSections} />
     </>
   );
 }

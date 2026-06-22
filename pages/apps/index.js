@@ -51,7 +51,28 @@ export default function AppsIndex({ groupedApps }) {
         </p>
       </section>
 
-      <DepthSections sections={depthSections} />
+      {groupedApps.map(group => (
+        <section key={group.category} className="content-block">
+          <h2>{group.label}</h2>
+          <div className="content-grid card-grid">
+            {group.items.map(app => {
+              const meta = getAppVerdictMeta(app.verdict);
+              return (
+                <article key={app.slug} className="card">
+                  <div className="card__header">
+                    <h3 className="card__title-icon">
+                      <Icon name={CATEGORY_ICONS[group.category] || 'apps'} />
+                      <Link href={`/apps/${app.slug}`}>{app.title}</Link>
+                    </h3>
+                    <span className={`badge ${meta.className}`}>{meta.label}</span>
+                  </div>
+                  <p>{app.bestMethod}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
 
       <section className="content-block">
         <h2>How to use this database</h2>
@@ -71,28 +92,7 @@ export default function AppsIndex({ groupedApps }) {
         </div>
       </section>
 
-      {groupedApps.map(group => (
-        <section key={group.category} className="content-block">
-          <h2>{group.label}</h2>
-          <div className="content-grid">
-            {group.items.map(app => {
-              const meta = getAppVerdictMeta(app.verdict);
-              return (
-                <article key={app.slug} className="card">
-                  <div className="card__header">
-                    <h3 className="card__title-icon">
-                      <Icon name={CATEGORY_ICONS[group.category] || 'apps'} />
-                      <Link href={`/apps/${app.slug}`}>{app.title}</Link>
-                    </h3>
-                    <span className={`badge ${meta.className}`}>{meta.label}</span>
-                  </div>
-                  <p>{app.bestMethod}</p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-      ))}
+      <DepthSections sections={depthSections} />
     </>
   );
 }
