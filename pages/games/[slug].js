@@ -221,7 +221,7 @@ export default function GamePage({ game, relatedGames }) {
               <Link href="/games">Browse more games</Link>
             </li>
             <li>
-              <Link href="/tools/game-checker">Use the game checker</Link>
+              <Link href="/tools/linux-game-compatibility-checker">Check your game library</Link>
             </li>
             <li>
               <Link href="/content/gaming-on-linux">Read the gaming guide</Link>

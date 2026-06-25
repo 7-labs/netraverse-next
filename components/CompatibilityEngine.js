@@ -52,6 +52,24 @@ export default function CompatibilityEngine({
       .slice(0, 8);
   }, [input, options, selected]);
 
+  // Zero-typing seed chips: prefer well-known headline items if present in this
+  // funnel's slice, otherwise fall back to the first options. Always real items.
+  const examples = useMemo(() => {
+    const preferred = ['microsoft-office', 'fortnite', 'adobe-photoshop', 'apex-legends', 'steam'];
+    const picks = [];
+    preferred.forEach(slug => {
+      const match = options.find(item => item.slug === slug);
+      if (match) picks.push(match);
+    });
+    for (const item of options) {
+      if (picks.length >= 3) break;
+      if (!picks.find(p => p.slug === item.slug)) picks.push(item);
+    }
+    return picks.slice(0, 3);
+  }, [options]);
+
+  const availableExamples = examples.filter(item => !selected.find(s => s.slug === item.slug));
+
   const noMatch = input.trim().length > 1 && suggestions.length === 0;
 
   function addItem(item) {
@@ -61,6 +79,13 @@ export default function CompatibilityEngine({
 
   function removeItem(slug) {
     setSelected(current => current.filter(item => item.slug !== slug));
+  }
+
+  function clearAll() {
+    setSelected([]);
+    setResult(null);
+    setCopied('');
+    window.history.replaceState({}, '', basePath);
   }
 
   // Keyboard support for the autocomplete (WAI-ARIA combobox pattern).
@@ -281,6 +306,22 @@ export default function CompatibilityEngine({
               </p>
             </form>
           ) : null}
+          {!selected.length && availableExamples.length ? (
+            <div className="example-chips">
+              <span className="example-chips__label">Try:</span>
+              {availableExamples.map(item => (
+                <button
+                  key={item.slug}
+                  type="button"
+                  className="example-chip"
+                  onClick={() => addItem(item)}
+                >
+                  <span aria-hidden="true">+</span>
+                  {item.title}
+                </button>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         <div className="form-group">
@@ -301,6 +342,11 @@ export default function CompatibilityEngine({
             {item.title} <span aria-hidden="true">✕</span>
           </button>
         ))}
+        {selected.length > 1 ? (
+          <button type="button" className="chip-clear" onClick={clearAll}>
+            Clear all
+          </button>
+        ) : null}
       </div>
 
       <div className="action-row">
@@ -326,7 +372,17 @@ export default function CompatibilityEngine({
               </p>
             </div>
             <div className="action-row action-row--report">
-              <button type="button" onClick={copyReport}>
+              {result.fallbackNeeded && result.blockers.length ? (
+                <Link className="button--primary" href={result.blockers[0].href}>
+                  <Icon name="arrowRight" />
+                  See how to handle {result.blockers[0].title}
+                </Link>
+              ) : null}
+              <button
+                type="button"
+                className={result.fallbackNeeded && result.blockers.length ? 'button--ghost' : undefined}
+                onClick={copyReport}
+              >
                 <Icon name={copied === 'report' ? 'check' : 'copy'} />
                 {copied === 'report' ? 'Copied' : 'Copy report'}
               </button>

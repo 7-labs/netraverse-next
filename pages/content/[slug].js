@@ -27,6 +27,11 @@ const GUIDE_TOOLS = {
   'old-pc-cant-run-windows-11': { kind: null, defaultUsage: 'general' },
 };
 
+// HowTo JSON-LD only belongs on a genuinely step-based guide. The migration
+// playbook has ordered "Step 1 / Step 2" sections; the rest are topical, so
+// emitting HowTo there is misleading to search engines.
+const HOWTO_GUIDES = new Set(['switch-from-windows-10-to-linux']);
+
 export default function GuidePage({ guide, options, depthBlock }) {
   if (!guide) {
     return null;
@@ -50,14 +55,16 @@ export default function GuidePage({ guide, options, depthBlock }) {
       datePublished: guide.updated,
       dateModified: guide.updated,
     }),
-    buildHowToJsonLd({
-      name: guide.title,
-      description: guide.description,
-      steps: guide.sections.map(section => ({
-        name: section.heading,
-        text: section.paragraphs[0] || section.heading,
-      })),
-    }),
+    HOWTO_GUIDES.has(guide.slug)
+      ? buildHowToJsonLd({
+          name: guide.title,
+          description: guide.description,
+          steps: guide.sections.map(section => ({
+            name: section.heading,
+            text: section.paragraphs[0] || section.heading,
+          })),
+        })
+      : null,
     buildFaqJsonLd(guide.faq),
   );
 
@@ -94,8 +101,6 @@ export default function GuidePage({ guide, options, depthBlock }) {
           </section>
         ) : null}
 
-        <DepthSections sections={depthSections} />
-
         {tool && options ? (
           <section className="content-block">
             <h2>Check your own setup</h2>
@@ -107,6 +112,8 @@ export default function GuidePage({ guide, options, depthBlock }) {
             />
           </section>
         ) : null}
+
+        <DepthSections sections={depthSections} />
 
         {guide.sections.map(section => (
           <section key={section.heading} className="content-block">

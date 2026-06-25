@@ -11,9 +11,10 @@ import {
   getAntiCheatMeta,
   getGameTierMeta,
 } from '../../lib/catalog';
-import { getGames } from '../../lib/data';
+import { getGames, getDatasetStats } from '../../lib/data';
 import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, buildItemListJsonLd, collectJsonLd } from '../../lib/seo';
+import { formatUpdatedDate } from '../../lib/site';
 
 function titleCase(value) {
   return String(value || '')
@@ -40,7 +41,7 @@ function toggleInSet(set, value) {
   return next;
 }
 
-export default function GamesIndex({ games }) {
+export default function GamesIndex({ games, datasetStats }) {
   const depthSections = getStaticPageDepth('games');
   const [search, setSearch] = useState('');
   const [tiers, setTiers] = useState(() => new Set());
@@ -94,7 +95,7 @@ export default function GamesIndex({ games }) {
             { href: '/games', label: 'Games' },
           ]),
           buildItemListJsonLd(
-            games.slice(0, 60).map(game => ({ name: game.title, href: `/games/${game.slug}` })),
+            games.map(game => ({ name: game.title, href: `/games/${game.slug}` })),
           ),
         )}
       />
@@ -105,6 +106,9 @@ export default function GamesIndex({ games }) {
         <p className="lede">
           Browse Proton tiers and anti-cheat status before you assume your game
           library can follow you to Linux.
+        </p>
+        <p className="meta-row meta-row--dataset">
+          Data updated {formatUpdatedDate(datasetStats.lastCheckedAt)} · {datasetStats.appCount} apps · {datasetStats.gameCount} games · sources: Flathub, ProtonDB, GamingOnLinux
         </p>
       </section>
 
@@ -209,6 +213,7 @@ export async function getStaticProps() {
   return {
     props: {
       games: getGames(),
+      datasetStats: getDatasetStats(),
     },
   };
 }

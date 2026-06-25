@@ -2,14 +2,39 @@ import Link from 'next/link';
 import Seo from './Seo';
 import CompatibilityEngine from './CompatibilityEngine';
 import DepthSections from './DepthSections';
+import { READINESS_SCORING } from '../lib/catalog';
 import { ALL_TOOLS } from '../lib/tools';
 import { getToolDepthSections } from '../lib/contentDepth';
-import { buildBreadcrumbJsonLd, buildWebApplicationJsonLd, collectJsonLd } from '../lib/seo';
+import { formatUpdatedDate } from '../lib/site';
+import {
+  buildBreadcrumbJsonLd,
+  buildFaqJsonLd,
+  buildWebApplicationJsonLd,
+  collectJsonLd,
+} from '../lib/seo';
 
-export default function ToolPage({ config, options }) {
+// Schematize the FAQ-shaped content each funnel already carries (why + result
+// interpretation cards) into real Q&A so it can emit FAQPage and render as a
+// static answer block. Per-funnel, so the five tools stay differentiated.
+function buildToolFaq(config) {
+  const faq = [];
+  if (config.why) {
+    faq.push({ question: `Why use the ${config.h1}?`, answer: config.why });
+  }
+  (config.resultCards || []).forEach(card => {
+    faq.push({
+      question: `What does a "${card.title}" result mean?`,
+      answer: card.body,
+    });
+  });
+  return faq;
+}
+
+export default function ToolPage({ config, options, datasetStats, exampleVerdicts = [] }) {
   const basePath = `/tools/${config.slug}`;
   const related = ALL_TOOLS.filter(tool => tool.href !== basePath).slice(0, 4);
   const depthSections = getToolDepthSections(config);
+  const faq = buildToolFaq(config);
 
   return (
     <>
@@ -27,6 +52,7 @@ export default function ToolPage({ config, options }) {
             description: config.description,
             path: basePath,
           }),
+          faq.length ? buildFaqJsonLd(faq) : null,
         )}
       />
 
@@ -36,12 +62,51 @@ export default function ToolPage({ config, options }) {
         <p className="lede">{config.lede}</p>
       </section>
 
+      <section className="answer-block" aria-labelledby="answer-block-heading">
+        <h2 id="answer-block-heading">{config.h1}: the short answer</h2>
+        <p className="answer-block__lead">{config.why || READINESS_SCORING.summary}</p>
+        <p>{READINESS_SCORING.definition}</p>
+        {exampleVerdicts.length ? (
+          <div className="table-wrap">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Software</th>
+                  <th scope="col">Linux verdict</th>
+                  <th scope="col">Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                {exampleVerdicts.map(item => (
+                  <tr key={item.href}>
+                    <th scope="row">
+                      <Link href={item.href}>{item.title}</Link>
+                    </th>
+                    <td>{item.verdictLabel}</td>
+                    <td>{item.reason}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : null}
+        <p className="answer-block__note">
+          Add your own apps and games in the checker below for a personalised result.
+        </p>
+      </section>
+
       <CompatibilityEngine
         options={options}
         defaultUsage={config.defaultUsage}
         searchPlaceholder={config.placeholder}
         basePath={basePath}
       />
+
+      {datasetStats ? (
+        <p className="meta-row meta-row--dataset">
+          Data updated {formatUpdatedDate(datasetStats.lastCheckedAt)} · {datasetStats.appCount} apps · {datasetStats.gameCount} games · sources: Flathub, ProtonDB, GamingOnLinux
+        </p>
+      ) : null}
 
       <DepthSections sections={depthSections} />
 
@@ -95,6 +160,20 @@ export default function ToolPage({ config, options }) {
           <p>
             <Link href={config.relatedGuide}>Open the guide that explains this decision in more detail.</Link>
           </p>
+        </section>
+      ) : null}
+
+      {faq.length ? (
+        <section className="content-block">
+          <h2>FAQ</h2>
+          <div className="faq-list">
+            {faq.map(item => (
+              <div key={item.question} className="faq-item">
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </div>
+            ))}
+          </div>
         </section>
       ) : null}
 

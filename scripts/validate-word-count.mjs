@@ -97,7 +97,6 @@ const STATIC_TEXT = {
   tools: 'Windows-to-Linux Compatibility Tools. Free checkers for apps, games, anti-cheat, hardware age, distro fit, old PCs, Windows 10 support deadlines, and migration planning. Pick the right checker first, then open app and game detail pages for risky items.',
   content: 'Linux Migration Guides. Practical guidance for Windows users evaluating Linux before the next forced hardware or support deadline. Read in decision order: deadline and options, ESU, Windows 11 incompatible PCs, apps, games, anti-cheat, distro choice, backups, testing, and rollback.',
   distro: 'Find the Best Linux Distribution for You. Choose hardware age, Linux familiarity, and workload to get a conservative starting recommendation. Options include Linux Mint, Zorin OS, Ubuntu LTS, Fedora Workstation, Xubuntu, Linux Lite, Nobara, Bazzite, Ubuntu Studio, and Arch Linux depending on the user profile.',
-  gameChecker: 'Game Checker. Look up a title before you assume your Linux gaming story is settled. Search for Apex Legends, Fortnite, Elden Ring, Proton tier, anti-cheat status, desktop Linux readiness, and the full game page.',
   history: 'How to use this historical page today. This page is preserved for old Netraverse and Win4Lin search intent, but the practical current question is whether your Windows apps and games move through native clients, web apps, Wine, Proton, or a Windows VM. Historical intent maps to the modern compatibility checker, app database, game database, and current Windows apps on Linux guide.',
   merge: 'Merge for SCO and UnixWare. Historical context for NeTraverse Merge and the older Unix-era approach to keeping Windows and DOS software available off Windows. The modern compatibility map connects DOS and Windows on Unix to apps, games, web workflows, Wine, Proton, anti-cheat, and VMs.',
 };
@@ -135,7 +134,6 @@ async function main() {
   add('/tools', text(STATIC_TEXT.tools, sectionText(depth, depth.getStaticPageDepth('tools')), ALL_TOOLS));
   add('/content', text(STATIC_TEXT.content, sectionText(depth, depth.getStaticPageDepth('content')), GUIDE_PAGES));
   add('/tools/distro-finder', text(STATIC_TEXT.distro, sectionText(depth, depth.getStaticPageDepth('distro-finder'))));
-  add('/tools/game-checker', text(STATIC_TEXT.gameChecker, sectionText(depth, depth.getStaticPageDepth('game-checker'))));
 
   Object.values(TOOL_CONFIGS).forEach(config => {
     add(`/tools/${config.slug}`, text(config, sectionText(depth, depth.getToolDepthSections(config))));

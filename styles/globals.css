@@ -418,9 +418,58 @@ h3 {
   font-weight: 500;
 }
 
+/* Freshness / source line: a plain muted sentence, not pill chips. Sits
+   between the checker and the content blocks. */
+.meta-row--dataset {
+  display: block;
+  margin: -8px 0 24px;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
 .surface {
   padding: 26px;
   margin-bottom: 24px;
+}
+
+/* ---------- SSR answer block (above the checker) ---------- */
+/* The crawl-visible "short answer" card. Reads as the primary verdict before
+   the interactive checker; reuses the surface tokens with a slight accent edge. */
+.answer-block {
+  padding: 26px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.answer-block h2 {
+  margin: 0 0 14px;
+}
+
+.answer-block > p {
+  max-width: 78ch;
+  color: var(--text-muted);
+}
+
+.answer-block__lead {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.answer-block .table-wrap {
+  margin: 18px 0;
+}
+
+.answer-block__note {
+  margin: 14px 0 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
 }
 
 .surface--checker {
@@ -433,7 +482,7 @@ h3 {
 
 .checker-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(180px, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 220px);
   gap: 16px;
   align-items: start;
 }
@@ -540,6 +589,62 @@ button[type='submit']:active,
 .chip:hover {
   background: var(--accent-soft);
   border-color: var(--accent);
+}
+
+/* "Clear all" reset shown once more than one item is added */
+.chip-clear {
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.chip-clear:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* Zero-typing example seeds under the search input */
+.example-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.example-chips__label {
+  color: var(--text-soft);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.example-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px dashed var(--border-strong);
+  background: var(--surface);
+  color: var(--accent-strong);
+  border-radius: var(--radius-pill);
+  padding: 6px 13px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: background 0.14s ease, border-color 0.14s ease;
+}
+
+.example-chip span {
+  font-weight: 800;
+  line-height: 1;
+}
+
+.example-chip:hover {
+  background: var(--accent-tint);
+  border-color: var(--accent);
+  border-style: solid;
 }
 
 .suggestion-list {
@@ -1184,8 +1289,15 @@ a.card,
   border-color: rgba(29, 78, 216, 0.16);
 }
 
+/* Gold = top Proton tier ("runs great"): distinct from native green and from
+   the lower tiers' warning orange, so the games grid is scannable at a glance. */
+.badge--gold {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border-color: rgba(29, 78, 216, 0.16);
+}
+
 .badge--wine,
-.badge--gold,
 .badge--silver,
 .badge--bronze {
   background: var(--warning-soft);
@@ -1427,6 +1539,21 @@ a.card,
   .primary-nav a .icon {
     font-size: 1.2rem;
   }
+
+  /* Touch targets: keep interactive controls at least ~44px tall on phones.
+     The chip is the only way to remove an added item, so it matters most. */
+  .chip,
+  .chip-clear,
+  .example-chip,
+  .filter-pill,
+  .button--ghost,
+  .button--primary {
+    min-height: 44px;
+  }
+
+  .suggestion-list button {
+    min-height: 44px;
+  }
 }
 
 /* ---------- Migration report (R4) ---------- */
@@ -1436,6 +1563,30 @@ a.card,
   flex-wrap: wrap;
   margin-top: 0;
   align-items: center;
+}
+
+/* Primary "fix your top blocker" CTA in the report (renders as a link) */
+.button--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--grad-brand);
+  color: #fff;
+  padding: 11px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 18px -8px rgba(29, 78, 216, 0.7);
+  transition: transform 0.12s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.button--primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: #fff;
+  text-decoration: none;
 }
 
 .button--ghost {

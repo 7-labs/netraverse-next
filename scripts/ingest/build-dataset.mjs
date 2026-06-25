@@ -3,12 +3,16 @@
 // and writes lib/data/{apps,games}.generated.json + lib/data/overlay.json.
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { ingestDate } from './grid.mjs';
+import { ingestDate, normName } from './grid.mjs';
 
 const root = process.cwd();
 const ingestDir = path.join(root, 'scripts', 'ingest');
 const cacheDir = path.join(ingestDir, 'cache');
 const dataDir = path.join(root, 'lib', 'data');
+
+// Keep at least this fraction of the last-good record count, else treat the fetch
+// as degraded and keep last-good rather than overwriting the moat with a thin set.
+const STALE_FLOOR = 0.9;
 
 async function readJson(file, fallback) {
   try {
@@ -18,15 +22,61 @@ async function readJson(file, fallback) {
   }
 }
 
-function normName(s) {
-  return String(s || '')
-    .toLowerCase()
-    .replace(/\(.*?\)/g, ' ')
-    .replace(/[™®:!.,'’]/g, '')
-    .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/^the\s+/, '')
-    .trim();
+// Atomic write: stage to a .tmp sibling then rename so a crash mid-write never
+// leaves a truncated JSON that the static build would import.
+async function writeJsonAtomic(file, value) {
+  const tmp = `${file}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(value, null, 2));
+  await fs.rename(tmp, file);
+}
+
+// Date-only (YYYY-MM-DD) so generated + overlay share one date field/precision.
+function toDateOnly(value) {
+  if (!value) return null;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
+}
+
+// A field counts as "resolved" only when the new fetch produced a real value —
+// not null/empty and not a placeholder tier/status. Used so a degraded fetch
+// never downgrades an already-good field back to pending/unknown.
+const PLACEHOLDERS = new Set(['', 'pending', 'unknown', 'na', 'none', 'low']);
+function isResolved(value) {
+  if (value === null || value === undefined) return false;
+  if (typeof value === 'string') return !PLACEHOLDERS.has(value.toLowerCase());
+  return true;
+}
+
+// Merge a freshly-derived record over its last-good counterpart: keep the prior
+// value for any field the new fetch did not resolve. Records new to this run pass
+// through unchanged.
+function mergeOverLastGood(next, prev) {
+  if (!prev) return next;
+  const merged = { ...prev, ...next };
+  for (const key of Object.keys(next)) {
+    if (!isResolved(next[key]) && isResolved(prev[key])) merged[key] = prev[key];
+  }
+  return merged;
+}
+
+// Apply the floor guard + per-field merge across a freshly-built map vs last-good.
+function reconcile(label, nextMap, prevMap) {
+  const nextCount = Object.keys(nextMap).length;
+  const prevCount = Object.keys(prevMap).length;
+  if (prevCount > 0 && nextCount < prevCount * STALE_FLOOR) {
+    console.warn(
+      `[build] NO-GO: ${label} fetch yielded ${nextCount} records (< ${Math.ceil(
+        prevCount * STALE_FLOOR,
+      )} = ${Math.round(STALE_FLOOR * 100)}% of last-good ${prevCount}); keeping last-good.`,
+    );
+    return prevMap;
+  }
+  const out = {};
+  for (const [slug, record] of Object.entries(nextMap)) {
+    out[slug] = mergeOverLastGood(record, prevMap[slug]);
+  }
+  return out;
 }
 
 // ---------- games ----------
@@ -139,17 +189,22 @@ async function main() {
   const existingApps = (await readJson(path.join(dataDir, 'apps.generated.json'), {})) || {};
   const existingGames = (await readJson(path.join(dataDir, 'games.generated.json'), {})) || {};
 
-  // GAMES — stale-guard: empty protondb cache keeps last-good.
-  const nextGames =
+  // GAMES — stale-guard: empty protondb cache keeps last-good; a partial/degraded
+  // fetch is caught by reconcile() (floor guard + per-field merge-over-last-good).
+  const builtGames =
     protondbRaw.length > 0
       ? Object.fromEntries(protondbRaw.map(r => [r.slug, deriveGame(r, gol.byName || {}, gol.sourceUrl)]))
       : existingGames;
+  const nextGames =
+    protondbRaw.length > 0 ? reconcile('games', builtGames, existingGames) : existingGames;
 
-  // APPS — stale-guard: empty flathub cache keeps last-good.
-  const nextApps =
+  // APPS — stale-guard: empty flathub cache keeps last-good; partial fetch reconciled.
+  const builtApps =
     flathubRaw.length > 0
       ? Object.fromEntries(flathubRaw.map(r => [r.slug, deriveApp(r, winehq.entries || {})]))
       : existingApps;
+  const nextApps =
+    flathubRaw.length > 0 ? reconcile('apps', builtApps, existingApps) : existingApps;
 
   // OVERLAY — assemble from agent partials, merged over any existing overlay (partials win).
   const overlayGamesPartial = (await readJson(path.join(ingestDir, 'overlay-games.partial.json'), {})) || {};
@@ -158,14 +213,27 @@ async function main() {
     apps: {},
     games: {},
   };
+  // Normalize every overlay record to a single date-only `lastCheckedAt` so the
+  // generated + overlay halves share one date field/precision on disk (legacy
+  // overlay records carried an ISO `lastUpdated` instead).
+  const normalizeOverlayDates = map =>
+    Object.fromEntries(
+      Object.entries(map).map(([slug, record]) => {
+        const lastCheckedAt = toDateOnly(record.lastCheckedAt || record.lastUpdated);
+        const next = { ...record };
+        if (lastCheckedAt) next.lastCheckedAt = lastCheckedAt;
+        delete next.lastUpdated;
+        return [slug, next];
+      }),
+    );
   const overlay = {
-    apps: { ...(existingOverlay.apps || {}), ...overlayAppsPartial },
-    games: { ...(existingOverlay.games || {}), ...overlayGamesPartial },
+    apps: normalizeOverlayDates({ ...(existingOverlay.apps || {}), ...overlayAppsPartial }),
+    games: normalizeOverlayDates({ ...(existingOverlay.games || {}), ...overlayGamesPartial }),
   };
 
-  await fs.writeFile(path.join(dataDir, 'games.generated.json'), JSON.stringify(nextGames, null, 2));
-  await fs.writeFile(path.join(dataDir, 'apps.generated.json'), JSON.stringify(nextApps, null, 2));
-  await fs.writeFile(path.join(dataDir, 'overlay.json'), JSON.stringify(overlay, null, 2));
+  await writeJsonAtomic(path.join(dataDir, 'games.generated.json'), nextGames);
+  await writeJsonAtomic(path.join(dataDir, 'apps.generated.json'), nextApps);
+  await writeJsonAtomic(path.join(dataDir, 'overlay.json'), overlay);
 
   const mergedApps = { ...nextApps, ...overlay.apps };
   const mergedGames = { ...nextGames, ...overlay.games };

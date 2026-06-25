@@ -2,7 +2,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import vm from 'node:vm';
 
-export const SITE_URL = 'https://www.netraverse.com';
+// Canonical host is owned by lib/site.js (the runtime single source). It is resolved
+// from there the first time getRouteManifest() runs and cached here so withSiteUrl()
+// — which both generate-sitemap.mjs and validate-launch.mjs call after the manifest —
+// stays in sync with <link rel=canonical>. The literal below is only a pre-resolution
+// fallback for the (unused) case where withSiteUrl is called before the manifest loads.
+export let SITE_URL = 'https://www.netraverse.com';
 
 async function readJson(filePath) {
   const contents = await fs.readFile(filePath, 'utf8');
@@ -64,11 +69,17 @@ function recordDate(record) {
 
 export async function getRouteManifest({ root = process.cwd() } = {}) {
   const dataDir = path.join(root, 'lib', 'data');
-  const [{ GUIDE_PAGES }, { WIN4LIN_PAGES }, { TOOL_SLUGS }] = await Promise.all([
-    loadDataModule(root, 'lib/guides.js', ['GUIDE_PAGES']),
-    loadDataModule(root, 'lib/history.js', ['WIN4LIN_PAGES']),
-    loadDataModule(root, 'lib/tools.js', ['TOOL_SLUGS']),
-  ]);
+  const [{ GUIDE_PAGES }, { WIN4LIN_PAGES }, { TOOL_SLUGS, STANDALONE_TOOL_SLUGS }, { SITE_URL: siteUrl }] =
+    await Promise.all([
+      loadDataModule(root, 'lib/guides.js', ['GUIDE_PAGES']),
+      loadDataModule(root, 'lib/history.js', ['WIN4LIN_PAGES']),
+      loadDataModule(root, 'lib/tools.js', ['TOOL_SLUGS', 'STANDALONE_TOOL_SLUGS']),
+      loadDataModule(root, 'lib/site.js', ['SITE_URL']),
+    ]);
+
+  // lib/site.js is the canonical-host source of truth; mirror it for withSiteUrl().
+  if (siteUrl) SITE_URL = siteUrl;
+  const standaloneToolSlugs = STANDALONE_TOOL_SLUGS || [];
 
   const appsRaw = await readJson(path.join(dataDir, 'apps.generated.json'));
   const gamesRaw = await readJson(path.join(dataDir, 'games.generated.json'));
@@ -115,8 +126,7 @@ export async function getRouteManifest({ root = process.cwd() } = {}) {
     '/content',
     '/merge',
     '/tools',
-    '/tools/distro-finder',
-    '/tools/game-checker',
+    ...standaloneToolSlugs.map(slug => `/tools/${slug}`),
     ...TOOL_SLUGS.map(slug => `/tools/${slug}`),
     ...guideSlugs.map(slug => `/content/${slug}`),
     ...win4linPaths,
@@ -143,7 +153,7 @@ export async function getRouteManifest({ root = process.cwd() } = {}) {
       games: allGameSlugs.length,
       guides: guideSlugs.length,
       win4lin: win4linPaths.length,
-      tools: TOOL_SLUGS.length + 2,
+      tools: TOOL_SLUGS.length + standaloneToolSlugs.length,
     },
   };
 }

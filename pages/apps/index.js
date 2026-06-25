@@ -6,9 +6,10 @@ import Icon from '../../components/Icon';
 import CatalogFilter from '../../components/CatalogFilter';
 import DepthSections from '../../components/DepthSections';
 import { APP_VERDICT_META, getAppVerdictMeta } from '../../lib/catalog';
-import { getApps } from '../../lib/data';
+import { getApps, getDatasetStats } from '../../lib/data';
 import { getStaticPageDepth } from '../../lib/contentDepth';
 import { buildBreadcrumbJsonLd, buildItemListJsonLd, collectJsonLd } from '../../lib/seo';
+import { formatUpdatedDate } from '../../lib/site';
 
 function toggleInSet(set, value) {
   const next = new Set(set);
@@ -34,7 +35,7 @@ const CATEGORY_ICONS = {
   utilities: 'tools',
 };
 
-export default function AppsIndex({ groupedApps }) {
+export default function AppsIndex({ groupedApps, datasetStats }) {
   const allApps = groupedApps.flatMap(group => group.items);
   const depthSections = getStaticPageDepth('apps');
   const [search, setSearch] = useState('');
@@ -89,7 +90,7 @@ export default function AppsIndex({ groupedApps }) {
             { href: '/apps', label: 'Apps' },
           ]),
           buildItemListJsonLd(
-            allApps.slice(0, 60).map(app => ({ name: app.title, href: `/apps/${app.slug}` })),
+            allApps.map(app => ({ name: app.title, href: `/apps/${app.slug}` })),
           ),
         )}
       />
@@ -100,6 +101,9 @@ export default function AppsIndex({ groupedApps }) {
         <p className="lede">
           Native, web, Wine, VM, and fallback paths for the Windows software
           that usually decides whether a Linux migration succeeds.
+        </p>
+        <p className="meta-row meta-row--dataset">
+          Data updated {formatUpdatedDate(datasetStats.lastCheckedAt)} · {datasetStats.appCount} apps · {datasetStats.gameCount} games · sources: Flathub, ProtonDB, GamingOnLinux
         </p>
       </section>
 
@@ -228,6 +232,7 @@ export async function getStaticProps() {
   return {
     props: {
       groupedApps,
+      datasetStats: getDatasetStats(),
     },
   };
 }

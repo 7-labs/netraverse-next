@@ -2,10 +2,18 @@
 // For each seed game, pulls the ProtonDB summary JSON and records the live tier.
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { smartGet, ingestTs } from './grid.mjs';
+import { smartGet, ingestTs, politeDelay } from './grid.mjs';
 
 const cacheDir = path.join(process.cwd(), 'scripts', 'ingest', 'cache');
 const seedFile = path.join(process.cwd(), 'scripts', 'ingest', 'seed-games.json');
+
+// Atomic write: stage to a .tmp sibling then rename so a crash mid-write never
+// leaves a truncated cache file for build-dataset to consume.
+async function writeJsonAtomic(file, value) {
+  const tmp = `${file}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(value, null, 2));
+  await fs.rename(tmp, file);
+}
 
 const VALID_TIERS = new Set(['platinum', 'gold', 'silver', 'bronze', 'borked', 'pending', 'native']);
 
@@ -36,6 +44,7 @@ async function main() {
     }
     const url = `https://www.protondb.com/api/v1/reports/summaries/${seed.steamAppId}.json`;
     const body = await smartGet(url);
+    await politeDelay();
     let protonTier = null;
     let confidence = 'low';
     let total = 0;
@@ -65,10 +74,7 @@ async function main() {
     });
   }
 
-  await fs.writeFile(
-    path.join(cacheDir, 'protondb.raw.json'),
-    JSON.stringify(results, null, 2),
-  );
+  await writeJsonAtomic(path.join(cacheDir, 'protondb.raw.json'), results);
   console.log(`[protondb] ${results.length} games | tier resolved: ${ok}, no-summary: ${miss}`);
 }
 

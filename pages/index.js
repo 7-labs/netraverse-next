@@ -4,18 +4,51 @@ import Seo from '../components/Seo';
 import Icon from '../components/Icon';
 import CompatibilityEngine from '../components/CompatibilityEngine';
 import DepthSections from '../components/DepthSections';
+import { buildExampleVerdicts, READINESS_SCORING } from '../lib/catalog';
 import { getDatasetOptions, getDatasetStats } from '../lib/data';
 import { getStaticPageDepth } from '../lib/contentDepth';
+import { formatUpdatedDate } from '../lib/site';
 import {
   buildBreadcrumbJsonLd,
   buildCompatibilityDatasetJsonLd,
+  buildFaqJsonLd,
   buildOrganizationJsonLd,
   buildWebApplicationJsonLd,
   buildWebSiteJsonLd,
   collectJsonLd,
 } from '../lib/seo';
 
-export default function Home({ options, datasetStats }) {
+// Static FAQ for the home page — general, high-volume Windows-to-Linux questions
+// that AI answer engines and PAA lift directly. Rendered in HTML + as FAQPage.
+const HOME_FAQ = [
+  {
+    question: 'Can my Windows 10 PC switch to Linux?',
+    answer:
+      'Usually yes, if your critical apps and games have native, web, or proven Proton paths. The blockers are typically a few VM-only desktop apps and multiplayer games with publisher-blocked anti-cheat. Enter your real software in the checker to get a readiness score and a per-item migration plan.',
+  },
+  {
+    question: 'Do Windows apps work on Linux?',
+    answer:
+      'It depends on the app. Many move cleanly via a native Linux build or the web version (browsers, Office on the web, Slack, Zoom, VS Code). Others run through Wine with testing, and a few — heavy Adobe, CAD, and some accounting tools — are safest in a Windows VM or via a Linux replacement.',
+  },
+  {
+    question: 'Will my games work on Linux?',
+    answer:
+      'Most single-player and many multiplayer Steam titles run well through Proton. The main blocker is kernel-level anti-cheat: some publishers do not enable it on Linux, so a game like Apex Legends stays a Windows-retention title even when Proton itself is fine. Check each title before deleting Windows.',
+  },
+  {
+    question: 'Is Linux free?',
+    answer:
+      'Yes. Mainstream desktop distributions such as Linux Mint, Ubuntu, and Fedora are free to download and use, which is part of why they are a practical alternative to buying a new Windows 11 PC for hardware that still performs.',
+  },
+  {
+    question: 'When does Windows 10 support end?',
+    answer:
+      'Mainstream Windows 10 support ended on 14 October 2025. Consumer Extended Security Updates (ESU) are a paid bridge that runs out on 13 October 2026, so the practical deadline to plan a migration is 2026.',
+  },
+];
+
+export default function Home({ options, datasetStats, exampleVerdicts }) {
   const depthSections = getStaticPageDepth('home');
 
   return (
@@ -38,6 +71,7 @@ export default function Home({ options, datasetStats }) {
             ...datasetStats,
             dateModified: datasetStats.lastCheckedAt,
           }),
+          buildFaqJsonLd(HOME_FAQ),
         )}
       />
 
@@ -52,7 +86,45 @@ export default function Home({ options, datasetStats }) {
         </p>
       </section>
 
+      <section className="answer-block" aria-labelledby="answer-block-heading">
+        <h2 id="answer-block-heading">Can you switch from Windows 10 to Linux?</h2>
+        <p className="answer-block__lead">{READINESS_SCORING.summary}</p>
+        <p>{READINESS_SCORING.definition}</p>
+        {exampleVerdicts?.length ? (
+          <div className="table-wrap">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th scope="col">Software</th>
+                  <th scope="col">Linux verdict</th>
+                  <th scope="col">Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                {exampleVerdicts.map(item => (
+                  <tr key={item.href}>
+                    <th scope="row">
+                      <Link href={item.href}>{item.title}</Link>
+                    </th>
+                    <td>{item.verdictLabel}</td>
+                    <td>{item.reason}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : null}
+        <p className="answer-block__note">
+          Run the checker below with your own apps and games for a personalised
+          migration report.
+        </p>
+      </section>
+
       <CompatibilityEngine options={options} basePath="/" />
+
+      <p className="meta-row meta-row--dataset">
+        Data updated {formatUpdatedDate(datasetStats.lastCheckedAt)} · {datasetStats.appCount} apps · {datasetStats.gameCount} games · sources: Flathub, ProtonDB, GamingOnLinux
+      </p>
 
       <section className="content-block">
         <h2><Icon name="route" />How to read your result</h2>
@@ -137,6 +209,18 @@ export default function Home({ options, datasetStats }) {
         </div>
       </section>
 
+      <section className="content-block">
+        <h2><Icon name="search" />Frequently asked questions</h2>
+        <div className="faq-list">
+          {HOME_FAQ.map(item => (
+            <div key={item.question} className="faq-item">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <DepthSections sections={depthSections} />
     </>
   );
@@ -147,10 +231,12 @@ Home.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
+  const options = getDatasetOptions();
   return {
     props: {
-      options: getDatasetOptions(),
+      options,
       datasetStats: getDatasetStats(),
+      exampleVerdicts: buildExampleVerdicts(options),
     },
   };
 }

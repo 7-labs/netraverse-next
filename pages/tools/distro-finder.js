@@ -127,11 +127,12 @@ export default function DistroFinder() {
             </select>
           </div>
 
+          <p className="action-hint">Pick three options, get a ranked distro shortlist.</p>
           <button type="submit">Get Recommendations</button>
         </form>
 
         {result ? (
-          <div className="results-panel">
+          <div className="results-panel" role="status" aria-live="polite">
             <h2>Recommended distributions</h2>
             <ul>
               {result.options.map(option => (

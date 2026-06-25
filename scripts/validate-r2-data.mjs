@@ -1,9 +1,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { normName } from './ingest/grid.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
+
+// Slugs intentionally allowed to ship without full source metadata. Empty by
+// design — every shipped record should carry sourceUrl + lastCheckedAt + confidence.
+const SOURCE_METADATA_WHITELIST = new Set([]);
 
 const PHASE1_APPS_MIN = 80;
 const PHASE1_GAMES_MIN = 100;
@@ -193,9 +198,38 @@ async function main() {
     errors.push(`head source metadata coverage ${(sourceCoverage * 100).toFixed(1)}% is below 95%`);
   }
 
+  // Source metadata is the moat's credibility contract: EVERY shipped record must
+  // carry sourceUrl + lastCheckedAt/lastUpdated + confidence (not just the head set).
+  const allMissingMetadata = [];
   for (const [slug, record] of [...Object.entries(apps), ...Object.entries(games)]) {
+    if (!hasSourceMetadata(record) && !SOURCE_METADATA_WHITELIST.has(slug)) {
+      allMissingMetadata.push(slug);
+    }
     if (record.confidence === 'low' && !isFilled(record.warningNote)) {
       warnings.push(`${slug} has confidence:"low" without warningNote`);
+    }
+  }
+  if (allMissingMetadata.length) {
+    errors.push(
+      `${allMissingMetadata.length} merged records missing sourceUrl/lastCheckedAt/confidence: ${formatList(
+        allMissingMetadata.slice(0, 12),
+      )}`,
+    );
+  }
+
+  // Normalized-name collision (within each namespace, since /apps and /games are
+  // separate routes): two slugs whose titles normalize identically are near-duplicate
+  // records — the alias-dedup hazard. Warn so they get reconciled before they ship.
+  for (const [namespace, records] of [['app', apps], ['game', games]]) {
+    const seen = new Map();
+    for (const [slug, record] of Object.entries(records)) {
+      const key = normName(record.title);
+      if (!key) continue;
+      if (seen.has(key)) {
+        warnings.push(`duplicate normalized ${namespace} title "${key}": ${seen.get(key)} and ${slug}`);
+      } else {
+        seen.set(key, slug);
+      }
     }
   }
 

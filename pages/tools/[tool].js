@@ -1,10 +1,18 @@
 import Layout from '../../components/Layout';
 import ToolPage from '../../components/ToolPage';
-import { getDatasetOptions } from '../../lib/data';
+import { buildExampleVerdicts } from '../../lib/catalog';
+import { getDatasetOptions, getDatasetStats } from '../../lib/data';
 import { getToolConfig, TOOL_SLUGS } from '../../lib/tools';
 
-export default function ToolRoute({ config, options }) {
-  return <ToolPage config={config} options={options} />;
+export default function ToolRoute({ config, options, datasetStats, exampleVerdicts }) {
+  return (
+    <ToolPage
+      config={config}
+      options={options}
+      datasetStats={datasetStats}
+      exampleVerdicts={exampleVerdicts}
+    />
+  );
 }
 
 ToolRoute.getLayout = function getLayout(page) {
@@ -34,6 +42,11 @@ export async function getStaticProps({ params }) {
   const all = getDatasetOptions();
   const options = config.kindFilter ? all.filter(item => item.kind === config.kindFilter) : all;
   return {
-    props: { config, options },
+    props: {
+      config,
+      options,
+      datasetStats: getDatasetStats(),
+      exampleVerdicts: buildExampleVerdicts(options),
+    },
   };
 }

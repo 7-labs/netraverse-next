@@ -2,10 +2,18 @@
 // Confirms native Linux availability by checking each seed app's Flathub id.
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { smartGet, ingestTs } from './grid.mjs';
+import { smartGet, ingestTs, politeDelay } from './grid.mjs';
 
 const cacheDir = path.join(process.cwd(), 'scripts', 'ingest', 'cache');
 const seedFile = path.join(process.cwd(), 'scripts', 'ingest', 'seed-apps.json');
+
+// Atomic write: stage to a .tmp sibling then rename so a crash mid-write never
+// leaves a truncated cache file for build-dataset to consume.
+async function writeJsonAtomic(file, value) {
+  const tmp = `${file}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(value, null, 2));
+  await fs.rename(tmp, file);
+}
 
 async function flathubExists(appId) {
   if (!appId) return false;
@@ -28,6 +36,7 @@ async function main() {
   let confirmed = 0;
   for (const seed of seeds) {
     const onFlathub = await flathubExists(seed.flathubId);
+    await politeDelay();
     if (onFlathub) confirmed += 1;
     const nativeAvailable = onFlathub || seed.verdict === 'native';
     results.push({
@@ -46,10 +55,7 @@ async function main() {
     });
   }
 
-  await fs.writeFile(
-    path.join(cacheDir, 'flathub.raw.json'),
-    JSON.stringify(results, null, 2),
-  );
+  await writeJsonAtomic(path.join(cacheDir, 'flathub.raw.json'), results);
   console.log(`[flathub] ${results.length} apps | confirmed on Flathub: ${confirmed}`);
 }
 

@@ -4,7 +4,7 @@
 // so this rarely yields rows — kept only as a backstop).
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { smartGet, web2md, ingestTs } from './grid.mjs';
+import { smartGet, web2md, ingestTs, normName } from './grid.mjs';
 
 const cacheDir = path.join(process.cwd(), 'scripts', 'ingest', 'cache');
 const AWACY_URLS = [
@@ -12,17 +12,6 @@ const AWACY_URLS = [
   'https://raw.githubusercontent.com/AreWeAntiCheatYet/AreWeAntiCheatYet/main/games.json',
 ];
 const GOL = 'https://www.gamingonlinux.com/anticheat/';
-
-export function normName(s) {
-  return String(s || '')
-    .toLowerCase()
-    .replace(/\(.*?\)/g, ' ')
-    .replace(/[™®:!.,'’]/g, '')
-    .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/^the\s+/, '')
-    .trim();
-}
 
 // AreWeAntiCheatYet status -> our enum: none|supported|broken|denied|unknown
 function mapAwacy(status) {
@@ -48,6 +37,14 @@ async function fromAwacy() {
     }
   }
   return null;
+}
+
+// Atomic write: stage to a .tmp sibling then rename so a crash mid-write never
+// leaves a truncated cache file for build-dataset to consume.
+async function writeJsonAtomic(file, value) {
+  const tmp = `${file}.tmp`;
+  await fs.writeFile(tmp, JSON.stringify(value, null, 2));
+  await fs.rename(tmp, file);
 }
 
 async function main() {
@@ -100,7 +97,7 @@ async function main() {
     byName,
     rows,
   };
-  await fs.writeFile(path.join(cacheDir, 'gamingonlinux.anticheat.json'), JSON.stringify(payload, null, 2));
+  await writeJsonAtomic(path.join(cacheDir, 'gamingonlinux.anticheat.json'), payload);
   console.log(`[anti-cheat] ${rows.length} rows from ${sourceUrl.includes('githubusercontent') ? 'AreWeAntiCheatYet' : 'GamingOnLinux'} (ok=${payload.ok})`);
 }
 

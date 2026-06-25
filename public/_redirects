@@ -52,3 +52,17 @@ http://www.netraverse.com/*                            https://www.netraverse.co
 /win4lin40/*                                           /win4lin/4-0/                                     301
 /win4lin5                                              /win4lin/5-0/                                     301
 /win4lin5/*                                            /win4lin/5-0/                                     301
+/tools/game-checker                                    /tools/linux-game-compatibility-checker/          301
+/tools/game-checker/*                                  /tools/linux-game-compatibility-checker/          301
+/apps/word                                             /apps/microsoft-word/                             301
+/apps/word/*                                           /apps/microsoft-word/                             301
+/apps/excel                                            /apps/microsoft-excel/                            301
+/apps/excel/*                                          /apps/microsoft-excel/                            301
+/apps/powerpoint                                       /apps/microsoft-powerpoint/                       301
+/apps/powerpoint/*                                     /apps/microsoft-powerpoint/                       301
+/apps/outlook                                          /apps/microsoft-outlook/                          301
+/apps/outlook/*                                        /apps/microsoft-outlook/                          301
+/apps/teams                                            /apps/microsoft-teams/                            301
+/apps/teams/*                                          /apps/microsoft-teams/                            301
+/apps/photoshop                                        /apps/adobe-photoshop/                            301
+/apps/photoshop/*                                      /apps/adobe-photoshop/                            301

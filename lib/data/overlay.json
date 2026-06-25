@@ -44,163 +44,6 @@
       "lastCheckedAt": "2026-06-19",
       "affiliate": null
     },
-    "word": {
-      "slug": "word",
-      "title": "Microsoft Word",
-      "category": "productivity",
-      "verdict": "web",
-      "wineRating": "na",
-      "nativeAvailable": false,
-      "webVersion": true,
-      "bestMethod": "Use Word on the web or switch to LibreOffice Writer for offline editing. Keep a Windows VM for heavy desktop-only formatting or macro dependencies.",
-      "alternatives": [
-        {
-          "name": "LibreOffice Writer"
-        },
-        {
-          "name": "ONLYOFFICE Docs"
-        }
-      ],
-      "difficulty": 5,
-      "notes": "The browser version covers a large share of everyday writing tasks.",
-      "citations": [
-        {
-          "title": "Microsoft 365",
-          "url": "https://www.microsoft365.com/"
-        },
-        {
-          "title": "LibreOffice",
-          "url": "https://www.libreoffice.org/"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
-      "affiliate": null
-    },
-    "excel": {
-      "slug": "excel",
-      "title": "Microsoft Excel",
-      "category": "productivity",
-      "verdict": "web",
-      "wineRating": "na",
-      "nativeAvailable": false,
-      "webVersion": true,
-      "bestMethod": "Use Excel on the web for mainstream spreadsheets or move to LibreOffice Calc if you need a local editor. Keep Windows for macro-heavy or add-in-heavy models.",
-      "alternatives": [
-        {
-          "name": "LibreOffice Calc"
-        },
-        {
-          "name": "ONLYOFFICE Docs"
-        }
-      ],
-      "difficulty": 7,
-      "notes": "Complex workbooks, VBA, and enterprise add-ins are the main reasons Linux migrations fall back to a VM.",
-      "citations": [
-        {
-          "title": "Microsoft 365",
-          "url": "https://www.microsoft365.com/"
-        },
-        {
-          "title": "LibreOffice",
-          "url": "https://www.libreoffice.org/"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
-      "affiliate": null
-    },
-    "powerpoint": {
-      "slug": "powerpoint",
-      "title": "Microsoft PowerPoint",
-      "category": "productivity",
-      "verdict": "web",
-      "wineRating": "na",
-      "nativeAvailable": false,
-      "webVersion": true,
-      "bestMethod": "Use PowerPoint on the web for mainstream decks or migrate to LibreOffice Impress for offline editing.",
-      "alternatives": [
-        {
-          "name": "LibreOffice Impress"
-        },
-        {
-          "name": "Canva",
-          "slug": "canva"
-        }
-      ],
-      "difficulty": 4,
-      "notes": "Presentation-heavy organizations usually migrate cleanly unless they rely on Windows-specific templates or add-ins.",
-      "citations": [
-        {
-          "title": "Microsoft 365",
-          "url": "https://www.microsoft365.com/"
-        },
-        {
-          "title": "Canva",
-          "url": "https://www.canva.com/"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
-      "affiliate": null
-    },
-    "outlook": {
-      "slug": "outlook",
-      "title": "Microsoft Outlook",
-      "category": "communication",
-      "verdict": "web",
-      "wineRating": "na",
-      "nativeAvailable": false,
-      "webVersion": true,
-      "bestMethod": "Use Outlook on the web. For desktop mail, consider Thunderbird, but keep Windows for workflows built around Outlook desktop add-ins or PST-heavy legacy setups.",
-      "alternatives": [
-        {
-          "name": "Thunderbird"
-        }
-      ],
-      "difficulty": 6,
-      "notes": "Outlook migrations are usually easier for Exchange and Microsoft 365 tenants that already live in the browser.",
-      "citations": [
-        {
-          "title": "Microsoft 365",
-          "url": "https://www.microsoft365.com/"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
-      "affiliate": null
-    },
-    "teams": {
-      "slug": "teams",
-      "title": "Microsoft Teams",
-      "category": "communication",
-      "verdict": "web",
-      "wineRating": "na",
-      "nativeAvailable": false,
-      "webVersion": true,
-      "bestMethod": "Install the Teams progressive web app in a Chromium-based browser. Treat the PWA as the default Linux path because the native client was retired.",
-      "alternatives": [
-        {
-          "name": "Slack",
-          "slug": "slack"
-        },
-        {
-          "name": "Zoom",
-          "slug": "zoom"
-        }
-      ],
-      "difficulty": 2,
-      "notes": "This is a clean example of a Linux workflow that moved from native client to browser-managed app.",
-      "citations": [
-        {
-          "title": "Microsoft Teams progressive web app now available on Linux",
-          "url": "https://techcommunity.microsoft.com/blog/microsoftteamsblog/microsoft-teams-progressive-web-app-now-available-on-linux/3669846"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
-      "affiliate": null
-    },
     "slack": {
       "slug": "slack",
       "title": "Slack",
@@ -339,8 +182,10 @@
         }
       ],
       "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
-      "affiliate": null
+      "affiliate": null,
+      "lastCheckedAt": "2026-06-18",
+      "sourceUrl": "https://code.visualstudio.com/docs/setup/linux",
+      "confidence": "high"
     },
     "visual-studio": {
       "slug": "visual-studio",
@@ -383,39 +228,6 @@
       ],
       "dataSource": "overlay",
       "lastCheckedAt": "2026-06-19",
-      "affiliate": null
-    },
-    "photoshop": {
-      "slug": "photoshop",
-      "title": "Adobe Photoshop",
-      "category": "creative",
-      "verdict": "wine",
-      "wineRating": "silver",
-      "nativeAvailable": false,
-      "webVersion": false,
-      "bestMethod": "Treat Linux Photoshop as an advanced workaround. Community Wine patches can help, but many users are better served by Photopea, GIMP, or a Windows VM.",
-      "alternatives": [
-        {
-          "name": "Photopea"
-        },
-        {
-          "name": "GIMP"
-        },
-        {
-          "name": "Affinity Photo",
-          "slug": "affinity-photo"
-        }
-      ],
-      "difficulty": 8,
-      "notes": "Photoshop is still one of the clearest examples where Linux compatibility exists in fragments rather than as a clean vendor-supported workflow.",
-      "citations": [
-        {
-          "title": "Adobe Creative Cloud on Linux via community Wine patches",
-          "url": "https://www.omgubuntu.co.uk/2026/01/adobe-creative-cloud-linux-wine-patches"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastUpdated": "2026-06-18T00:00:00.000Z",
       "affiliate": null
     },
     "figma": {

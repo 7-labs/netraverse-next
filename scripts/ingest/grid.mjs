@@ -77,7 +77,9 @@ export async function gridGet(target, { force = false, retries = 3, timeoutMs = 
     if (cached !== null) return cached;
   }
   try {
-    const raw = await postJson('/api/grid', { target, force: true }, { retries, timeoutMs });
+    // Honor the caller's force flag (FORCE_REFRESH still forces via env) so a cached
+    // miss lets Proxy-Grid serve its own cache instead of always re-fetching upstream.
+    const raw = await postJson('/api/grid', { target, force: force || FORCE }, { retries, timeoutMs });
     let body = raw;
     try {
       const parsed = JSON.parse(raw);
@@ -96,27 +98,32 @@ export async function gridGet(target, { force = false, retries = 3, timeoutMs = 
 
 // Fetch a public JSON/raw target directly first (fast, for non-blocked APIs like
 // Flathub / ProtonDB), falling back to the Grid proxy only if the direct call fails.
-export async function smartGet(target, { timeoutMs = 15000, force = false } = {}) {
+export async function smartGet(target, { timeoutMs = 15000, force = false, retries = 2 } = {}) {
   const key = keyFor('http', target);
   if (!force) {
     const cached = await cacheGet(key);
     if (cached !== null) return cached;
   }
-  try {
-    const ctrl = new AbortController();
-    const t = setTimeout(() => ctrl.abort(), timeoutMs);
-    const res = await fetch(target, {
-      headers: { 'user-agent': 'netraverse-ingest/1.0 (+https://www.netraverse.com)' },
-      signal: ctrl.signal,
-    });
-    clearTimeout(t);
-    if (res.ok) {
-      const body = await res.text();
-      await cacheSet(key, body);
-      return body;
+  // Direct path with a couple of retries so a single transient blip doesn't null
+  // the record before we even reach the grid fallback.
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), timeoutMs);
+      const res = await fetch(target, {
+        headers: { 'user-agent': 'netraverse-ingest/1.0 (+https://www.netraverse.com)' },
+        signal: ctrl.signal,
+      });
+      clearTimeout(t);
+      if (res.ok) {
+        const body = await res.text();
+        await cacheSet(key, body);
+        return body;
+      }
+    } catch {
+      /* retry, then fall through to grid */
     }
-  } catch {
-    /* fall through to grid */
+    if (attempt < retries) await sleep(500 * (attempt + 1));
   }
   const viaGrid = await gridGet(target, { force: true, retries: 1, timeoutMs: 18000 });
   if (viaGrid !== null) await cacheSet(key, viaGrid);
@@ -149,6 +156,25 @@ export async function web2md(url) {
     console.warn(`[grid] web2md failed for ${url}: ${err.message}`);
     return null;
   }
+}
+
+// Small jittered pause between sequential source calls so a cold weekly run does
+// not hammer the proxy / upstreams with hundreds of back-to-back requests.
+export async function politeDelay(baseMs = 120) {
+  await sleep(baseMs + Math.floor(Math.random() * baseMs));
+}
+
+// Shared title normalizer used as a dedupe / match key across the fetch + build
+// scripts (previously copy-pasted in three places).
+export function normName(s) {
+  return String(s || '')
+    .toLowerCase()
+    .replace(/\(.*?\)/g, ' ')
+    .replace(/[™®:!.,'’]/g, '')
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/^the\s+/, '')
+    .trim();
 }
 
 export const ingestTs = process.env.NETRAVERSE_INGEST_TS || new Date().toISOString();
