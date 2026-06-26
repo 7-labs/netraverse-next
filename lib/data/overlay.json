@@ -159,34 +159,6 @@
       "lastCheckedAt": "2026-06-19",
       "affiliate": null
     },
-    "vs-code": {
-      "slug": "vs-code",
-      "title": "Visual Studio Code",
-      "category": "development",
-      "verdict": "native",
-      "wineRating": "na",
-      "nativeAvailable": true,
-      "webVersion": false,
-      "bestMethod": "Install the official Linux build or use the repo packages for your distribution.",
-      "alternatives": [
-        {
-          "name": "VSCodium"
-        }
-      ],
-      "difficulty": 1,
-      "notes": "VS Code is one of the strongest proofs that many modern developer workflows already move cleanly to Linux.",
-      "citations": [
-        {
-          "title": "Visual Studio Code on Linux",
-          "url": "https://code.visualstudio.com/docs/setup/linux"
-        }
-      ],
-      "dataSource": "overlay",
-      "affiliate": null,
-      "lastCheckedAt": "2026-06-18",
-      "sourceUrl": "https://code.visualstudio.com/docs/setup/linux",
-      "confidence": "high"
-    },
     "visual-studio": {
       "slug": "visual-studio",
       "title": "Visual Studio (IDE)",
@@ -807,52 +779,6 @@
         {
           "title": "WhatsApp Web",
           "url": "https://web.whatsapp.com/"
-        }
-      ],
-      "dataSource": "overlay",
-      "lastCheckedAt": "2026-06-19",
-      "affiliate": null
-    },
-    "steam-games": {
-      "slug": "steam-games",
-      "title": "Steam (Windows games via Proton)",
-      "category": "gaming",
-      "verdict": "native",
-      "wineRating": "platinum",
-      "nativeAvailable": true,
-      "webVersion": false,
-      "bestMethod": "Install Steam natively and enable Steam Play (Proton) to run most Windows games; check ProtonDB before relying on a specific title.",
-      "whatBreaks": [
-        "Some games with kernel-level anti-cheat (e.g. certain titles using Vanguard/BattlEye configs) do not run",
-        "A handful of DRM/launcher-wrapped games are unsupported",
-        "Day-one releases may need a newer Proton/GE build"
-      ],
-      "alternatives": [
-        {
-          "name": "Lutris"
-        },
-        {
-          "name": "Heroic Games Launcher"
-        },
-        {
-          "name": "Bottles",
-          "slug": "bottles"
-        }
-      ],
-      "migrationRisk": "medium",
-      "recommendedAction": "native",
-      "difficulty": 3,
-      "notes": "Proton makes the large majority of Steam Windows games playable on Linux; anti-cheat is the main remaining blocker.",
-      "confidence": "high",
-      "sourceUrl": "https://www.protondb.com/",
-      "citations": [
-        {
-          "title": "ProtonDB",
-          "url": "https://www.protondb.com/"
-        },
-        {
-          "title": "Steam Play / Proton",
-          "url": "https://store.steampowered.com/linux"
         }
       ],
       "dataSource": "overlay",
@@ -2212,6 +2138,58 @@
       "dataSource": "overlay",
       "lastCheckedAt": "2026-06-19",
       "affiliate": null
+    },
+    "steam": {
+      "slug": "steam",
+      "title": "Steam",
+      "category": "gaming",
+      "verdict": "native",
+      "wineRating": "platinum",
+      "nativeAvailable": true,
+      "webVersion": false,
+      "bestMethod": "Install Steam natively and enable Steam Play (Proton) to run most Windows games; check ProtonDB before relying on a specific title.",
+      "whatBreaks": [
+        "Some games with kernel-level anti-cheat (e.g. certain titles using Vanguard/BattlEye configs) do not run",
+        "A handful of DRM/launcher-wrapped games are unsupported",
+        "Day-one releases may need a newer Proton/GE build"
+      ],
+      "alternatives": [
+        {
+          "name": "Lutris"
+        },
+        {
+          "name": "Heroic Games Launcher"
+        },
+        {
+          "name": "Bottles",
+          "slug": "bottles"
+        }
+      ],
+      "migrationRisk": "medium",
+      "recommendedAction": "native",
+      "difficulty": 3,
+      "notes": "Steam runs natively on Linux; Proton makes the large majority of Windows games playable, with kernel-level anti-cheat the main remaining blocker.",
+      "confidence": "high",
+      "sourceUrl": "https://www.protondb.com/",
+      "citations": [
+        {
+          "title": "ProtonDB",
+          "url": "https://www.protondb.com/"
+        },
+        {
+          "title": "Steam Play / Proton",
+          "url": "https://store.steampowered.com/linux"
+        }
+      ],
+      "dataSource": "overlay",
+      "lastCheckedAt": "2026-06-19",
+      "affiliate": null
+    },
+    "figma-linux": {
+      "redirectTo": "figma"
+    },
+    "p7zip": {
+      "redirectTo": "seven-zip"
     }
   },
   "games": {

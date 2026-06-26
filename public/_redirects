@@ -66,3 +66,11 @@ http://www.netraverse.com/*                            https://www.netraverse.co
 /apps/teams/*                                          /apps/microsoft-teams/                            301
 /apps/photoshop                                        /apps/adobe-photoshop/                            301
 /apps/photoshop/*                                      /apps/adobe-photoshop/                            301
+/apps/vs-code                                          /apps/vscode/                                     301
+/apps/vs-code/*                                        /apps/vscode/                                     301
+/apps/figma-linux                                      /apps/figma/                                      301
+/apps/figma-linux/*                                    /apps/figma/                                      301
+/apps/steam-games                                      /apps/steam/                                      301
+/apps/steam-games/*                                    /apps/steam/                                      301
+/apps/p7zip                                            /apps/seven-zip/                                  301
+/apps/p7zip/*                                          /apps/seven-zip/                                  301

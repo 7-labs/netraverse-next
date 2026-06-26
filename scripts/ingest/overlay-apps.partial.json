@@ -109,9 +109,9 @@
     "lastCheckedAt": "2026-06-19",
     "affiliate": null
   },
-  "steam-games": {
-    "slug": "steam-games",
-    "title": "Steam (Windows games via Proton)",
+  "steam": {
+    "slug": "steam",
+    "title": "Steam",
     "category": "gaming",
     "verdict": "native",
     "wineRating": "platinum",
@@ -123,7 +123,7 @@
     "migrationRisk": "medium",
     "recommendedAction": "native",
     "difficulty": 3,
-    "notes": "Proton makes the large majority of Steam Windows games playable on Linux; anti-cheat is the main remaining blocker.",
+    "notes": "Steam runs natively on Linux; Proton makes the large majority of Windows games playable, with kernel-level anti-cheat the main remaining blocker.",
     "confidence": "high",
     "sourceUrl": "https://www.protondb.com/",
     "citations": [{"title": "ProtonDB", "url": "https://www.protondb.com/"}, {"title": "Steam Play / Proton", "url": "https://store.steampowered.com/linux"}],
@@ -1142,5 +1142,7 @@
     "dataSource": "overlay",
     "lastCheckedAt": "2026-06-19",
     "affiliate": null
-  }
+  },
+  "figma-linux": {"redirectTo": "figma"},
+  "p7zip": {"redirectTo": "seven-zip"}
 }

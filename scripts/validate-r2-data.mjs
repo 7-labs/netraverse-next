@@ -75,6 +75,12 @@ function mergeRecords(base, override) {
   return merged;
 }
 
+// Alias-dedup tombstones (overlay records with `redirectTo`) are not shipped pages —
+// drop them so counts, collision checks, and source-metadata checks see only real records.
+function stripRedirects(records) {
+  return Object.fromEntries(Object.entries(records).filter(([, record]) => !record.redirectTo));
+}
+
 function findRecord(records, aliases) {
   for (const slug of aliases) {
     if (records[slug]) return { slug, record: records[slug] };
@@ -114,8 +120,8 @@ async function main() {
   const gamesGenerated = await readJson('lib/data/games.generated.json');
   const overlay = await readJson('lib/data/overlay.json');
 
-  const apps = mergeRecords(appsGenerated, overlay.apps || {});
-  const games = mergeRecords(gamesGenerated, overlay.games || {});
+  const apps = stripRedirects(mergeRecords(appsGenerated, overlay.apps || {}));
+  const games = stripRedirects(mergeRecords(gamesGenerated, overlay.games || {}));
   const appCount = Object.keys(apps).length;
   const gameCount = Object.keys(games).length;
 

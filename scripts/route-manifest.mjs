@@ -89,8 +89,10 @@ export async function getRouteManifest({ root = process.cwd() } = {}) {
   const mergedApps = { ...appsRaw, ...(overlay.apps || {}) };
   const mergedGames = { ...gamesRaw, ...(overlay.games || {}) };
 
-  const allAppSlugs = Object.keys(mergedApps).sort();
-  const allGameSlugs = Object.keys(mergedGames).sort();
+  // Drop alias-dedup tombstones (overlay records with `redirectTo`): their old URL is a
+  // 301 in public/_redirects, so they must not appear in the sitemap or orphan check.
+  const allAppSlugs = Object.keys(mergedApps).filter(slug => !mergedApps[slug].redirectTo).sort();
+  const allGameSlugs = Object.keys(mergedGames).filter(slug => !mergedGames[slug].redirectTo).sort();
   const guideSlugs = GUIDE_PAGES.map(guide => guide.slug).sort();
   const win4linPaths = WIN4LIN_PAGES.map(page => page.path).sort();
 
